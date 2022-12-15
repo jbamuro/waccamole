@@ -61,8 +61,11 @@ Total Mass	605g
 I believe these may work as a suitable replacement (at least it does for SDVX) https://www.crutchfield.com/S-nMsSvT4rfnE/p_108R6532EM/Infinity-Reference-REF-6532ex.html?omnews=17719017
 
 ## PCB Details
+<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00811.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00811.JPG" width="150" height="150"/>
 
 Power supplies:
+<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00812.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00812.JPG" width="150" height="150"/>
+
 ```
 LFA150F-12-J1 150W 12V 50-60Hz 12.5A IN AC100-240V
 LFA150F-5-J1Y 150W 5V 50-60Hz 30A IN AC100-240V
@@ -70,12 +73,26 @@ LFA150F-5-J1Y 150W 5V 50-60Hz 30A IN AC100-240V
 These two units supply all the power needed for the PCB components (sound system, LEDs, touch controller etc).
 My photos will look a little different at the bottom as we had to jerry rig an extension cable to feed power into the unit since I don't have the original cabling for it. Works fine on American power, theoretically works fine in europe without a transformer as well based on some reports. R1 uses a 300VA step down transformer https://cdn.discordapp.com/attachments/267603668046446603/1045057845999173692/IMG_20221123_112537805_HDR.jpg but that's probably overkill.
 
-Touch Unit Control Board (PSS-7135-L02-01) - The most interesting part of the PCB. Custom part made by Pentel. Two of these exist on the PCB board that process 6 channels each, to get the 2 halves of the touch controller. Each segment of the touch controller has one of these as well, with the addition of the ribbon cable to connect the segments together. 
+Touch Unit Control Board (PSS-7135-L02-01) 
+<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00814.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00814.JPG" width="150" height="150"/>
+The most interesting part of the PCB. Custom part made by Pentel. Two of these exist on the PCB board that process 6 channels each, to get the 2 halves of the touch controller. Each segment of the touch controller has one of these as well, with the addition of the ribbon cable to connect the segments together. 
 
-LED Data board (14-1497-R) - This sends the pretty colors to the touch controller and card reader panel?
-2.1 channel AMP (14-1466CR) - Handles analog sound routing to subwoofer and tweeters
+LED Data board (14-1497-R) 
+<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00813.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00813.JPG" width="150" height="150"/>
+This sends the pretty colors to the touch controller and card reader panel?
 
-I/O Control Board (837-15257-01) - The existence of this board is a bit overkill for what it's used for, likely it *had* to be used due to Sega producing the cabinets for Marvelous. This is a newer version of the control board that has a USB port on it, almost all sega cabs use this now. Note: Wacca does NOT check for a coin counter, so the resistor trick is not needed to apply credits in game.
+
+2.1 channel AMP (14-1466CR) 
+<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00816.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00816.JPG" width="150" height="150"/>
+Handles analog sound routing to subwoofer and tweeters
+
+Headphone AMP (00-1358AR)
+<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00815.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00815.JPG" width="150" height="150"/>
+Handles audio output to the control panel
+
+I/O Control Board (837-15257-01) 
+<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00817.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00817.JPG" width="150" height="150"/>
+ The existence of this board is a bit overkill for what it's used for, likely it *had* to be used due to Sega producing the cabinets for Marvelous. This is a newer version of the control board that has a USB port on it, almost all sega cabs use this now. Note: Wacca does NOT check for a coin counter, so the resistor trick is not needed to apply credits in game.
 
 ## Card reader panel "ASSY CTRL PNL"
 This giant metal LED lined panel has [4] plugs that connect to
@@ -90,9 +107,9 @@ The coin entry stuff connected to the cash box is here too.
 There are 12 of these bad boys divided into two halves, set to channel 1-6 on each side that feed back into 2 touch unit control boards. Each one weighs x grams which totals to about 40 LBS. Somehow I never really understood how MASSIVE these units are until I held an individual segment in my hand. 
 
 Here are some scans of a segment that shows the curve profile.
-<img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve1.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve1.png" width="150" height="150"/>
-![Touchcon Curve 2](img/concurve2.png)
-![Touchcon Curve 3](img/concurve3.png)
+<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve1.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve1.png" width="150" height="150"/>
+<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve2.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve2.png" width="150" height="150"/>
+<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve3.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve3.png" width="150" height="150"/>
 
 ## Replacement LED PCBs
 Wacca LEDs are notorious for being burnt out, you've likely received your machine in a state where some panels are not getting color data, are dim, or are straight up not lit up. This is partly due to the design of WS2812.
