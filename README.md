@@ -90,7 +90,9 @@ The coin entry stuff connected to the cash box is here too.
 There are 12 of these bad boys divided into two halves, set to channel 1-6 on each side that feed back into 2 touch unit control boards. Each one weighs x grams which totals to about 40 LBS. Somehow I never really understood how MASSIVE these units are until I held an individual segment in my hand. 
 
 Here are some scans of a segment that shows the curve profile.
-
+![Touchcon Curve 1](img/concurve1.png =150x150)
+![Touchcon Curve 2](img/concurve1.png =150x150)
+![Touchcon Curve 3](img/concurve1.png =150x150)
 
 ## Replacement LED PCBs
 Wacca LEDs are notorious for being burnt out, you've likely received your machine in a state where some panels are not getting color data, are dim, or are straight up not lit up. This is partly due to the design of WS2812.
@@ -125,12 +127,12 @@ https://www.lcsc.com/ is the recommended shop for these, they ship right out of 
 | Footprint | Parts                  | Size | Value  | LCSC    | Remark                                      |
 | --------- | ---------------------- | ---- | ------ | ------- | --------------------------------------------|
 | C1-C8     | Not Needed             | N/A  | N/A    | N/A     | WS2813B-V5 do not require decoupling caps   |
-| C9        | Tantalum Capacitor     | 3216?| 22uF   | [**C782264**](https://www.lcsc.com/product-detail/Tantalum-Capacitors_CEC-Shenzhen-Zhenhua-XinYun-Elec-CA45-A-16V-22uF-K_C782264.html) | Optional. 16V? (testing in progress)        |
-| CN1,CN2   | JST XA 3 pin           |      |        | C265055 | B03B-XASK-1(LF)(SN)                         |
-| CN3       | JST XA 4 pin           |      |        | C264994 | B04B-XASK-1(LF)(SN)                         |
-| D1-D8     | Worldsemi WS2813B-V5   |      |        | C965558 |                                             |
-| R1,R2     | 0805W8F1000T5E         | 0805 | 100R   | C17408  |                                             |
-| U1,U2     | MMBD1503A              |      |        | C242273 |                                             |
+| C9        | Tantalum Capacitor     | 3216?| 22uF   | [**C782264**(]https://www.lcsc.com/product-detail/Tantalum-Capacitors_CEC-Shenzhen-Zhenhua-XinYun-Elec-CA45-A-16V-22uF-K_C782264.html) | Optional. 16V? (testing in progress)        |
+| CN1,CN2   | JST XA 3 pin           |      |        | [**C265055**(]https://www.lcsc.com/product-detail/Wire-To-Board-Wire-To-Wire-Connector_JST-Sales-America-B03B-XASK-1-LF-SN_C265055.html) | B03B-XASK-1(LF)(SN)                         |
+| CN3       | JST XA 4 pin           |      |        | [**C264994**(]https://www.lcsc.com/product-detail/Wire-To-Board-Wire-To-Wire-Connector_JST-Sales-America-B04B-XASK-1-LF-SN_C264994.html) | B04B-XASK-1(LF)(SN)                         |
+| D1-D8     | Worldsemi WS2813B-V5   |      |        | [**C965558**(]https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Worldsemi-WS2813B-V5_C965558.html) |                                             |
+| R1,R2     | 0805W8F1000T5E         | 0805 | 100R   | [**C17408**(]https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F1000T5E_C17408.html)  |                                             |
+| U1,U2     | MMBD1503A              |      |        | [**C242273**(]https://www.lcsc.com/product-detail/Diodes-General-Purpose_onsemi-MMBD1503A_C242273.html) |                                             |
 
 So to do the math for you, to replace all of your lights, that's 60 PCBs you need.
 ```
@@ -153,6 +155,21 @@ Just remember to use solder with flux (kester 63/37 .031 inch leaded solder reco
 One way to shave a lot of time off mass producing these PCBs is to order a stencil from https://www.oshstencils.com/
 Upload the gerber zip, select the side that has all the LEDs as the top stencil (wacca_ws2813_f_paste.gtp), and make frameless stainless steel 5mil. Should cost about $50.
 Get some solder paste and apply it to the PCB using the stencil, apply the SMD components, put it in a modified oven or on top of a modified clothes iron (or maybe you can use hot air at low flow)
+
+
+Replacing the board on the touch panel
+
+TODO: post a more detailed guide with photos
+
+But this process is pretty easy, for most of them you dont even have to remove the panel but let's assume you're replacing all 60.
+
+1) Remove the screws holding the panel in the frame, remove panel
+2) Remove the ribbon from the pentel touch pcb and unscrew and remove the pcb
+3) Unscrew each PCB and pull them out
+4) Place in the new PCB and screw everything back together
+
+Tip: You can "grip" the ribbon to feed it back through the hole to get it back into the pcb by using painter's tape. 
+Be gentle here though, broken ribbons are no fun.
 
 ## Other hardware
 
