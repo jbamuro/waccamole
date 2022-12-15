@@ -19,12 +19,16 @@ This PDF should be pretty easy to find online, there's also a shitty version tha
 The anatomy of the cabinet an ALLS desktop connecting to a set of PCBs via two USB ports, two RS232 ports, two 3.5mm audio jacks, and digital video out to a 50 inch LCD (hdmi, displayport are supported WITH audio out). 
 
 ALLS desktop RS232 1 --> PCB -->
+
 ALLS desktop RS232 2 --> -->
+
 ALLS desktop USB 1 -->
+
 ALLS desktop USB 2 --> 
 
 
 The desktop is a 
+```
 ALLS HX [849-0006]
 Motherboard: Gigabyte MDH11BM [837-15384-02]
 CPU: Intel Core i5-6500
@@ -35,9 +39,10 @@ Sound Card: Realtek ALC888S
 OS: Windows 10 IoT LTSB 2016
 PSU: 400W Seasonic 80 Bronze https://www.newegg.com/seasonic-ss-400et-bronze-400w/p/N82E16817151076 [from ALLX UX, i have 0 motiviation to open this PSU to confirm] 
 RS232: 2 port + 1 port [Goes right to COM 1 COM 2 COM 3 on the motherboard]
-
+```
 
 Sound system
+```
 Subwoofer: S02012D0 4OHM 40W ????
 
 Speakers: 2x 
@@ -50,14 +55,16 @@ Frequency Range	200~20kHz
 Sound Pressure Level	85dB
 Dimensions(WxHxD)	120x90x97.5
 Total Mass	605g
-
+```
 I believe these may work as a suitable replacement (at least it does for SDVX) https://www.crutchfield.com/S-nMsSvT4rfnE/p_108R6532EM/Infinity-Reference-REF-6532ex.html?omnews=17719017
 
 ## PCB Details
 
 Power supplies:
+```
 LFA150F-12-J1 150W 12V 50-60Hz 12.5A IN AC100-240V
 LFA150F-5-J1Y 150W 5V 50-60Hz 30A IN AC100-240V
+```
 These two units supply all the power needed for the PCB components (sound system, LEDs, touch controller etc).
 My photos will look a little different at the bottom as we had to jerry rig an extension cable to feed power into the unit since I don't have the original cabling for it. Works fine on American power, theoretically works fine in europe without a transformer as well based on some reports. R1 uses a 300VA step down transformer https://cdn.discordapp.com/attachments/267603668046446603/1045057845999173692/IMG_20221123_112537805_HDR.jpg but that's probably overkill.
 
@@ -94,7 +101,7 @@ Note that at the time of writing, the most recent revision's gerbers are actuall
 
 As a sidenote, it would be interesting to see someone make a APA102 variant of the LED PCBs on an ASC.
 
-#Details on manufacturing your own LED PCBs
+##Details on manufacturing your own LED PCBs
 1) Clone Isola's repo or download the ZIP from the Code button https://github.com/mnm-isola/wacca_ws2813. wacca_ws2813_rev20221021 is the revision we want (the main difference is that the capacitor at C9 is SMD instead of THT. if you need THT, the previous August revision will do just fine)
 2) Download KiCad https://www.kicad.org/download/
 3) Open wacca_ws2813.kicab_pcb
@@ -107,7 +114,8 @@ It took a total 7 days for 200 PCBs to produce, ship, and arrive from China to C
 
 If someone has a cool wacca related silkscreen, please give. Maybe one of each navigator.
 
-#Next steps
+Next steps
+
 Now that your PCBs are fabricating, it's time to order the parts you'll need. 
 https://www.lcsc.com/ is the recommended shop for these, they ship right out of shenzhen and it's quite quick, considering.
 
@@ -124,16 +132,19 @@ https://www.lcsc.com/ is the recommended shop for these, they ship right out of 
 | U1,U2     | MMBD1503A              |      |        | C242273 |                                             |
 
 So to do the math for you, to replace all of your lights, that's 60 PCBs you need.
+```
 60x  C782264 [these ship in multiples of 5]
 120x C265055 [these ship in multiples of 10]
 60x  C264994 [these ship in multiples of 10]
 480x C965558 [these ship in multiples of 5]
 120x C17408  [these ship in multiples of 100, you'll have 80 extra]
 120x C242273 [these ship in multiples of 5]
+```
 
 The parts at the time of writing were $61.94 with $14.24 slower shipping from China to California
 
-#Soldering it all together
+Soldering it all together
+
 If you're reading this, you probably know the basics on soldering and soldering SMD components.
 If you're totally new to soldering, SMD might be a bit tricky. I'd suggest picking up an interesting keyboard project (like the corne) and studying lots of youtube videos on the matter.
 Just remember to use solder with flux (kester 63/37 .031 inch leaded solder recommended), and to use a smoke absorber for your safety (Hakko FA400-04 recommended). When in doubt, flux flux flux.
@@ -176,26 +187,41 @@ Boot Linux through a USB drive (i recommend using Linux Mint and Rufus to create
 Use DD to image the drive https://linuxhint.com/make-disk-images-dd-command-linux/
 
 tl;dr
-`sudo apt install lsscsi`
-`lsscsi`
-lists all the drives plugged in, look for your wacca drive (if you have some kind of complex setup, do the command prior to plugging in the drive and then after to discover which one)
-`sudo fdisk /dev/sd<wacca-drive>`
-we want to access the wacca drive. replace /dev/sd<wacca-drive> with whatever you saw in the previous step
-`p`
-This will list all the partitions on the drive and the exact sector count. Important to note them.
-`q`
-quits out of fdisk
 
-`sudo dd if=/dev/sd<wacca-drive> of=/pathtostorage/wacca.img bs=100M conv=noerror`
-Creates a clone image of the specified input `if` to the specified destination `of`
+`sudo apt install lsscsi`
+
+`lsscsi`
+
+lists all the drives plugged in, look for your wacca drive (if you have some kind of complex setup, do the command prior to plugging in the drive and then after to discover which one)
+
+`sudo fdisk /dev/sd<wacca-drive>`
+
+we want to access the wacca drive. replace /dev/sd<wacca-drive> with whatever you saw in the previous step
+
+  `p`
+
+  This will list all the partitions on the drive and the exact sector count. Important to note them.
+
+  `q`
+
+  quits out of fdisk
+
+
+  `sudo dd if=/dev/sd<wacca-drive> of=/pathtostorage/wacca.img bs=100M conv=noerror`
+
+  Creates a clone image of the specified input `if` to the specified destination `of`
 
 `ls -lh wacca.img`
-Checks permission of the drive, should match the original
-`fdisk -; wacca.img`
-To compare the sector count, should match the original
+
+  Checks permission of the drive, should match the original
+
+  `fdisk -; wacca.img`
+
+  To compare the sector count, should match the original
 
 then restore using
-sudo dd if=<wacca.img> of=<newdrive> bs=100M conv=noerror
+
+  sudo dd if=<wacca.img> of=<newdrive> bs=100M conv=noerror
 
 TODO: issues related to going to a larger drive?
 
