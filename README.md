@@ -18,13 +18,15 @@ This PDF should be pretty easy to find online, there's also a shitty version tha
 
 The anatomy of the cabinet an ALLS desktop connecting to a set of PCBs via two USB ports, two RS232 ports, two 3.5mm audio jacks, and digital video out to a 50 inch LCD (hdmi, displayport are supported WITH audio out). 
 
-ALLS desktop RS232 1 --> PCB -->
+TODO: Someone should double check this and update with more accurate info, I forgot where everything terminated when it was explained to me:
 
-ALLS desktop RS232 2 --> -->
+ALLS desktop RS232 1 --> Left Pentel PCB --> Left half of the touch controller
 
-ALLS desktop USB 1 -->
+ALLS desktop RS232 2 --> Right Pentel PCB --> Right half of the touch controller
 
-ALLS desktop USB 2 --> 
+ALLS desktop USB 1 --> Sega IO
+
+ALLS desktop USB 2 --> LED Data board
 
 
 The desktop is a 
@@ -90,18 +92,18 @@ There are 12 of these bad boys divided into two halves, set to channel 1-6 on ea
 Here are some scans of a segment that shows the curve profile.
 
 
-## Replacement LED PCBs
+##Replacement LED PCBs
 Wacca LEDs are notorious for being burnt out, you've likely received your machine in a state where some panels are not getting color data, are dim, or are straight up not lit up. This is partly due to the design of WS2812.
 
 There's two good options for reproducing a better version
 1) Isola has a WS2813 design which can be just popped into your touch controller without any issue (it will however, look brighter than the 2812's so consider a full swap) https://github.com/mnm-isola/wacca_ws2813
 Note that at the time of writing, the most recent revision's gerbers are actually the previous revision. I would recommend downloading the project from https://github.com/mnm-isola/wacca_ws2813/tree/main/wacca_ws2813_rev20220814 and opening it in kicad and making your own gerber. Detailed instructions below.
 
-2) Speedy labs is selling their revision of the PCB https://www.speedylabs.us/product/wacca-ws2813-led-pcb/ you'll need 60 of them to replace all your touch units. There is a europe equivalent vendor [TODO]
+2) Speedy labs is selling their revision of the PCB https://www.speedylabs.us/product/wacca-ws2813-led-pcb/ you'll need 60 of them to replace all your touch units. There is a europe equivalent vendor []
 
 As a sidenote, it would be interesting to see someone make a APA102 variant of the LED PCBs on an ASC.
 
-## Details on manufacturing your own LED PCBs
+##Details on manufacturing your own LED PCBs
 1) Clone Isola's repo or download the ZIP from the Code button https://github.com/mnm-isola/wacca_ws2813. wacca_ws2813_rev20221021 is the revision we want (the main difference is that the capacitor at C9 is SMD instead of THT. if you need THT, the previous August revision will do just fine)
 2) Download KiCad https://www.kicad.org/download/
 3) Open wacca_ws2813.kicab_pcb
@@ -114,7 +116,6 @@ It took a total 7 days for 200 PCBs to produce, ship, and arrive from China to C
 
 If someone has a cool wacca related silkscreen, please give. Maybe one of each navigator.
 
-Next steps
 
 Now that your PCBs are fabricating, it's time to order the parts you'll need. 
 https://www.lcsc.com/ is the recommended shop for these, they ship right out of shenzhen and it's quite quick, considering.
@@ -221,7 +222,7 @@ we want to access the wacca drive. replace /dev/sd<wacca-drive> with whatever yo
 
 then restore using
 
-  sudo dd if=<wacca.img> of=<newdrive> bs=100M conv=noerror
+  `sudo dd if=<wacca.img> of=<newdrive> bs=100M conv=noerror`
 
 TODO: issues related to going to a larger drive?
 
