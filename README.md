@@ -125,7 +125,7 @@ https://www.lcsc.com/ is the recommended shop for these, they ship right out of 
 | Footprint | Parts                  | Size | Value  | LCSC    | Remark                                      |
 | --------- | ---------------------- | ---- | ------ | ------- | --------------------------------------------|
 | C1-C8     | Not Needed             | N/A  | N/A    | N/A     | WS2813B-V5 do not require decoupling caps   |
-| C9        | Tantalum Capacitor     | 3216?| 22uF   | C782264 | Optional. 16V? (testing in progress)        |
+| C9        | Tantalum Capacitor     | 3216?| 22uF   | [**C782264**](https://www.lcsc.com/product-detail/Tantalum-Capacitors_CEC-Shenzhen-Zhenhua-XinYun-Elec-CA45-A-16V-22uF-K_C782264.html) | Optional. 16V? (testing in progress)        |
 | CN1,CN2   | JST XA 3 pin           |      |        | C265055 | B03B-XASK-1(LF)(SN)                         |
 | CN3       | JST XA 4 pin           |      |        | C264994 | B04B-XASK-1(LF)(SN)                         |
 | D1-D8     | Worldsemi WS2813B-V5   |      |        | C965558 |                                             |
@@ -186,8 +186,11 @@ ALLS uses various tamper protections such as bitlocker, tpm, etc. that are provi
 It's a very good idea to image your drive, so you can restore it and have it work, or to just have a 2nd drive handy.
 
 Boot Linux through a USB drive (i recommend using Linux Mint and Rufus to create the bootable USB. plenty of guides on this)
+
 Plug in an external drive if your boot USB drive isn't large enough to contain a 120gb image
+
 Plug in your wacca drive via usb sata enclosure device
+
 Use DD to image the drive https://linuxhint.com/make-disk-images-dd-command-linux/
 
 tl;dr
