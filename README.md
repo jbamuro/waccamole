@@ -90,9 +90,9 @@ The coin entry stuff connected to the cash box is here too.
 There are 12 of these bad boys divided into two halves, set to channel 1-6 on each side that feed back into 2 touch unit control boards. Each one weighs x grams which totals to about 40 LBS. Somehow I never really understood how MASSIVE these units are until I held an individual segment in my hand. 
 
 Here are some scans of a segment that shows the curve profile.
-![Touchcon Curve 1](img/concurve1.png =150x150)
-![Touchcon Curve 2](img/concurve1.png =150x150)
-![Touchcon Curve 3](img/concurve1.png =150x150)
+![Touchcon Curve 1](img/concurve1.png)
+![Touchcon Curve 2](img/concurve2.png)
+![Touchcon Curve 3](img/concurve3.png)
 
 ## Replacement LED PCBs
 Wacca LEDs are notorious for being burnt out, you've likely received your machine in a state where some panels are not getting color data, are dim, or are straight up not lit up. This is partly due to the design of WS2812.
@@ -127,12 +127,12 @@ https://www.lcsc.com/ is the recommended shop for these, they ship right out of 
 | Footprint | Parts                  | Size | Value  | LCSC    | Remark                                      |
 | --------- | ---------------------- | ---- | ------ | ------- | --------------------------------------------|
 | C1-C8     | Not Needed             | N/A  | N/A    | N/A     | WS2813B-V5 do not require decoupling caps   |
-| C9        | Tantalum Capacitor     | 3216?| 22uF   | [**C782264**(]https://www.lcsc.com/product-detail/Tantalum-Capacitors_CEC-Shenzhen-Zhenhua-XinYun-Elec-CA45-A-16V-22uF-K_C782264.html) | Optional. 16V? (testing in progress)        |
-| CN1,CN2   | JST XA 3 pin           |      |        | [**C265055**(]https://www.lcsc.com/product-detail/Wire-To-Board-Wire-To-Wire-Connector_JST-Sales-America-B03B-XASK-1-LF-SN_C265055.html) | B03B-XASK-1(LF)(SN)                         |
-| CN3       | JST XA 4 pin           |      |        | [**C264994**(]https://www.lcsc.com/product-detail/Wire-To-Board-Wire-To-Wire-Connector_JST-Sales-America-B04B-XASK-1-LF-SN_C264994.html) | B04B-XASK-1(LF)(SN)                         |
-| D1-D8     | Worldsemi WS2813B-V5   |      |        | [**C965558**(]https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Worldsemi-WS2813B-V5_C965558.html) |                                             |
-| R1,R2     | 0805W8F1000T5E         | 0805 | 100R   | [**C17408**(]https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F1000T5E_C17408.html)  |                                             |
-| U1,U2     | MMBD1503A              |      |        | [**C242273**(]https://www.lcsc.com/product-detail/Diodes-General-Purpose_onsemi-MMBD1503A_C242273.html) |                                             |
+| C9        | Tantalum Capacitor     | 3216?| 22uF   | [**C782264**](https://www.lcsc.com/product-detail/Tantalum-Capacitors_CEC-Shenzhen-Zhenhua-XinYun-Elec-CA45-A-16V-22uF-K_C782264.html) | Optional. 16V? (testing in progress)        |
+| CN1,CN2   | JST XA 3 pin           |      |        | [**C265055**](https://www.lcsc.com/product-detail/Wire-To-Board-Wire-To-Wire-Connector_JST-Sales-America-B03B-XASK-1-LF-SN_C265055.html) | B03B-XASK-1(LF)(SN)                         |
+| CN3       | JST XA 4 pin           |      |        | [**C264994**](https://www.lcsc.com/product-detail/Wire-To-Board-Wire-To-Wire-Connector_JST-Sales-America-B04B-XASK-1-LF-SN_C264994.html) | B04B-XASK-1(LF)(SN)                         |
+| D1-D8     | Worldsemi WS2813B-V5   |      |        | [**C965558**](https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Worldsemi-WS2813B-V5_C965558.html) |                                             |
+| R1,R2     | 0805W8F1000T5E         | 0805 | 100R   | [**C17408**](https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F1000T5E_C17408.html)  |                                             |
+| U1,U2     | MMBD1503A              |      |        | [**C242273**](https://www.lcsc.com/product-detail/Diodes-General-Purpose_onsemi-MMBD1503A_C242273.html) |                                             |
 
 So to do the math for you, to replace all of your lights, that's 60 PCBs you need.
 ```
