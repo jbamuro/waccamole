@@ -90,7 +90,7 @@ The coin entry stuff connected to the cash box is here too.
 There are 12 of these bad boys divided into two halves, set to channel 1-6 on each side that feed back into 2 touch unit control boards. Each one weighs x grams which totals to about 40 LBS. Somehow I never really understood how MASSIVE these units are until I held an individual segment in my hand. 
 
 Here are some scans of a segment that shows the curve profile.
-![Touchcon Curve 1](img/concurve1.png)
+<img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve1.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve1.png" width="150" height="150"/>
 ![Touchcon Curve 2](img/concurve2.png)
 ![Touchcon Curve 3](img/concurve3.png)
 
