@@ -103,7 +103,7 @@ Note that at the time of writing, the most recent revision's gerbers are actuall
 
 As a sidenote, it would be interesting to see someone make a APA102 variant of the LED PCBs on an ASC.
 
-##Details on manufacturing your own LED PCBs
+## Details on manufacturing your own LED PCBs
 1) Clone Isola's repo or download the ZIP from the Code button https://github.com/mnm-isola/wacca_ws2813. wacca_ws2813_rev20221021 is the revision we want (the main difference is that the capacitor at C9 is SMD instead of THT. if you need THT, the previous August revision will do just fine)
 2) Download KiCad https://www.kicad.org/download/
 3) Open wacca_ws2813.kicab_pcb
@@ -186,6 +186,8 @@ ALLS uses various tamper protections such as bitlocker, tpm, etc. that are provi
 It's a very good idea to image your drive, so you can restore it and have it work, or to just have a 2nd drive handy.
 
 Boot Linux through a USB drive (i recommend using Linux Mint and Rufus to create the bootable USB. plenty of guides on this)
+Plug in an external drive if your boot USB drive isn't large enough to contain a 120gb image
+Plug in your wacca drive via usb sata enclosure device
 Use DD to image the drive https://linuxhint.com/make-disk-images-dd-command-linux/
 
 tl;dr
