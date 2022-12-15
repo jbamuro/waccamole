@@ -61,6 +61,7 @@ Total Mass	605g
 I believe these may work as a suitable replacement (at least it does for SDVX) https://www.crutchfield.com/S-nMsSvT4rfnE/p_108R6532EM/Infinity-Reference-REF-6532ex.html?omnews=17719017
 
 ## PCB Details
+TODO: Add specific chip components
 <br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00811.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00811.JPG" width="150" height="150"/>
 
 <b>Power supplies:</b>
@@ -169,9 +170,9 @@ If you're reading this, you probably know the basics on soldering and soldering 
 If you're totally new to soldering, SMD might be a bit tricky. I'd suggest picking up an interesting keyboard project (like the corne) and studying lots of youtube videos on the matter.
 Just remember to use solder with flux (kester 63/37 .031 inch leaded solder recommended), and to use a smoke absorber for your safety (Hakko FA400-04 recommended). When in doubt, flux flux flux.
 
-One way to shave a lot of time off mass producing these PCBs is to order a stencil from https://www.oshstencils.com/
-Upload the gerber zip, select the side that has all the LEDs as the top stencil (wacca_ws2813_f_paste.gtp), and make frameless stainless steel 5mil. Should cost about $50.
-Get some solder paste and apply it to the PCB using the stencil, apply the SMD components, put it in a modified oven or on top of a modified clothes iron (or maybe you can use hot air at low flow)
+One way to shave a lot of time off mass producing these PCBs is to use solder paste and order a stencil from https://www.oshstencils.com/
+Upload the gerber zip, select the side that has all the LEDs as the top stencil (wacca_ws2813_f_paste.gtp), and make frameless stainless steel 5mil. Should cost about $50. Ordering the jig accessory can help as well, but you can just use other PCBs to hold the position of the one you're squeegeeing. 
+Get some solder paste and apply it to the PCB using the stencil (spread over stencil and squeegee. if no stencil, careful syringing), apply the SMD components, put it in a modified oven or on top of a modified clothes iron (or maybe you can use hot air at low flow)
 
 
 Replacing the board on the touch panel
@@ -191,6 +192,7 @@ Be gentle here though, broken ribbons are no fun.
 ## Other hardware
 
 50 inch LED
+
 I tried with a 55 inch and the circle size is not quite right. If you're using original hw, you'll need to be exactly 50 inch or get a TV with good overscan controls. I got a TCL 50S455 open box for $299.99 at bb. 
 
 Network Router
@@ -213,7 +215,7 @@ You can get away with using a phillips screwdriver but you really do risk stripp
 
 The main interest in opening the ALLS is getting to the solid state drive that's inside. It's a bit of a pain but you don't have to disassemble too much of it to be able to get it out (I was able to strain the ATX connector a bit to unscrew the drive without tampering any cable ties).
 
-To make this process much easier the second time around, it's recommended to either get a long SATA cable (???) or to get an enclosure that fits in the open PCI slot on the ALLS, this is the one people have used https://www.amazon.com/StarTech-com-2-5in-Removable-Drive-Expansion/dp/B002MWDRD6
+To make this process much easier the second time around, it's recommended to either get a long SATA cable and plug your drive somewhere more accessible or to get an enclosure that fits in the open PCI slot on the ALLS, this is the one people have used https://www.amazon.com/StarTech-com-2-5in-Removable-Drive-Expansion/dp/B002MWDRD6
 
 ## Imaging your ALLS drive
 ALLS uses various tamper protections such as bitlocker, tpm, etc. that are provisioned from the factory. As such, you can't just stick in any drive and expect it to work, even with keychip. 
@@ -269,13 +271,20 @@ There will be no problems with base functionality from imaging this on a larger 
 UNKNOWN: expand the existing partition possible? would be good for the future of wacca+ / omnimix etc.
 
 # Other
-USB capture cards can be used to stream Wacca. This will also show additional song stats on the parts of the screen that are otherwise not visible from the cab. This is the recommended one to use https://www.amazon.com/gp/product/B0BJ6XLK45 but anything 1080p60 is good, there's no EDID fuckery.
+USB capture cards can be used to stream Wacca. 
+
+This will also show additional song stats on the parts of the screen that are otherwise not visible from the cab. This is the recommended one to use https://www.amazon.com/gp/product/B0BJ6XLK45 but anything 1080p60 is good, there's no EDID fuckery.
 
 Gooseneck Phone mount thing
+
 There's a little bracket on the top right of your machine that is designed for you to clamp a gooseneck phone mount onto to record gameplay. 
 TODO: Update this with a recommended mount that has appropriate length etc.
 
-Gloves. You will want to wear gloves to play the game because you *will* burn the skin on your fingertips from doing slides on the acrylic. Any cotton gloves are recommended, lots of people like the white gloves available at Daiso. Thick or thin gloves depending on your preference, I like thin but people want to feel less friction from the touch segments and so they go thick. If you wanna go full Wacca, the custom gloves made by marv are OEM these https://www.amazon.co.jp/-/en/gp/product/B0767CMNDQ/ https://www.amazon.co.jp/-/en/gp/product/B07DJ2KJ1S/ (these are thin, and won't last long). I have a vector trace of the wacca gloves 
+Gloves. 
+
+You will want to wear gloves to play the game because you *will* burn the skin on your fingertips from doing slides on the acrylic. Any cotton gloves are recommended, lots of people like the white gloves available at Daiso. Thick or thin gloves depending on your preference, I like thin but people want to feel less friction from the touch segments and so they go thick. If you wanna go full Wacca, the custom gloves made by marv are OEM these https://www.amazon.co.jp/-/en/gp/product/B0767CMNDQ/ https://www.amazon.co.jp/-/en/gp/product/B07DJ2KJ1S/ (these are thin, and won't last long). I have a vector trace of the wacca gloves 
 
 
-Custom charts. A charter exists here: https://github.com/Goatgarien/BAKKA-Editor/ and custom song injection is fully working. Join their discord for more information.
+Custom charts. 
+
+A charter exists here: https://github.com/Goatgarien/BAKKA-Editor/ and custom song injection is fully working. Join their discord for more information.
