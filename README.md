@@ -92,7 +92,7 @@ There are 12 of these bad boys divided into two halves, set to channel 1-6 on ea
 Here are some scans of a segment that shows the curve profile.
 
 
-# Replacement LED PCBs
+## Replacement LED PCBs
 Wacca LEDs are notorious for being burnt out, you've likely received your machine in a state where some panels are not getting color data, are dim, or are straight up not lit up. This is partly due to the design of WS2812.
 
 There's two good options for reproducing a better version
