@@ -164,6 +164,7 @@ For connecting to a private server you'll want
 - GL.iNet GL-AR750 (Creta)
 - GL.iNet GL-AR750S (Slate)
 - GL.iNet GL-MT300N-V2 (Mango)
+
 or any router that supports OpenWrt 22.03
 
 If you need wifi, Slate is the recommended one to go with. however, you *can* make mango's perform adequately with wifi on dedicated APs.
@@ -197,7 +198,7 @@ lists all the drives plugged in, look for your wacca drive (if you have some kin
 
 `sudo fdisk /dev/sd<wacca-drive>`
 
-we want to access the wacca drive. replace /dev/sd<wacca-drive> with whatever you saw in the previous step
+we want to access the wacca drive. replace `/dev/sd<wacca-drive>` with whatever you saw in the previous step
 
   `p`
 
@@ -224,7 +225,9 @@ then restore using
 
   `sudo dd if=<wacca.img> of=<newdrive> bs=100M conv=noerror`
 
-TODO: issues related to going to a larger drive?
+There will be no problems with base functionality from imaging this on a larger drive.
+
+UNKNOWN: expand the existing partition possible? would be good for the future of wacca+ / omnimix etc.
 
 # Other
 USB capture cards can be used to stream Wacca. This will also show additional song stats on the parts of the screen that are otherwise not visible from the cab. This is the recommended one to use https://www.amazon.com/gp/product/B0BJ6XLK45 but anything 1080p60 is good, there's no EDID fuckery.
@@ -233,7 +236,7 @@ Gooseneck Phone mount thing
 There's a little bracket on the top right of your machine that is designed for you to clamp a gooseneck phone mount onto to record gameplay. 
 TODO: Update this with a recommended mount that has appropriate length etc.
 
-Gloves. You will want to wear gloves to play the game because you *will* burn the skin on your fingertips from doing slides on the acrylic. Any cotton gloves are recommended, lots of people like the white gloves available at Daiso. Thick or thin gloves depending on your preference, I like thin but people want to feel less friction from the touch segments and so they go thick. If you wanna go full Wacca, the custom gloves made by marv are OEM these https://www.amazon.co.jp/-/en/gp/product/B0767CMNDQ/ https://www.amazon.co.jp/-/en/gp/product/B07DJ2KJ1S/ (these are thin, and won't last long)
-TODO: Update which size gloves they are
+Gloves. You will want to wear gloves to play the game because you *will* burn the skin on your fingertips from doing slides on the acrylic. Any cotton gloves are recommended, lots of people like the white gloves available at Daiso. Thick or thin gloves depending on your preference, I like thin but people want to feel less friction from the touch segments and so they go thick. If you wanna go full Wacca, the custom gloves made by marv are OEM these https://www.amazon.co.jp/-/en/gp/product/B0767CMNDQ/ https://www.amazon.co.jp/-/en/gp/product/B07DJ2KJ1S/ (these are thin, and won't last long). I have a vector trace of the wacca gloves 
+
 
 Custom charts. A charter exists here: https://github.com/Goatgarien/BAKKA-Editor/ and custom song injection is fully working. Join their discord for more information.
