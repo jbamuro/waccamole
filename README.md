@@ -164,7 +164,7 @@ So to do the math for you, to replace all of your lights, that's 60 PCBs you nee
 
 The parts at the time of writing were $61.94 with $14.24 slower shipping from China to California
 
-Soldering it all together
+### Soldering it all together
 
 If you're reading this, you probably know the basics on soldering and soldering SMD components.
 If you're totally new to soldering, SMD might be a bit tricky. I'd suggest picking up an interesting keyboard project (like the corne) and studying lots of youtube videos on the matter.
@@ -175,7 +175,7 @@ Upload the gerber zip, select the side that has all the LEDs as the top stencil 
 Get some solder paste and apply it to the PCB using the stencil (spread over stencil and squeegee. if no stencil, careful syringing), apply the SMD components, put it in a modified oven or on top of a modified clothes iron (or maybe you can use hot air at low flow)
 
 
-Replacing the board on the touch panel
+### Replacing the board on the touch panel
 
 TODO: post a more detailed guide with photos
 
