@@ -145,7 +145,7 @@ https://www.lcsc.com/ is the recommended shop for these, they ship right out of 
 | Footprint | Parts                  | Size | Value  | LCSC    | Remark                                      |
 | --------- | ---------------------- | ---- | ------ | ------- | --------------------------------------------|
 | C1-C8     | Not Needed             | N/A  | N/A    | N/A     | WS2813B-V5 do not require decoupling caps   |
-| C9        | Tantalum Capacitor     | 3216?| 22uF   | [**C782264**](https://www.lcsc.com/product-detail/Tantalum-Capacitors_CEC-Shenzhen-Zhenhua-XinYun-Elec-CA45-A-16V-22uF-K_C782264.html) | Optional. 16V? (testing in progress)        |
+| C9        | Tantalum Capacitor     | 7343| 220uF   | [**C8024**](https://www.lcsc.com/product-detail/Tantalum-Capacitors_Kyocera-AVX-TAJD227K010RNJ_C8024.html) | Optional but adds protection.         |
 | CN1,CN2   | JST XA 3 pin           |      |        | [**C265055**](https://www.lcsc.com/product-detail/Wire-To-Board-Wire-To-Wire-Connector_JST-Sales-America-B03B-XASK-1-LF-SN_C265055.html) | B03B-XASK-1(LF)(SN)                         |
 | CN3       | JST XA 4 pin           |      |        | [**C264994**](https://www.lcsc.com/product-detail/Wire-To-Board-Wire-To-Wire-Connector_JST-Sales-America-B04B-XASK-1-LF-SN_C264994.html) | B04B-XASK-1(LF)(SN)                         |
 | D1-D8     | Worldsemi WS2813B-V5   |      |        | [**C965558**](https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Worldsemi-WS2813B-V5_C965558.html) |                                             |
@@ -208,6 +208,7 @@ If you need wifi, Slate is the recommended one to go with. however, you *can* ma
 The routers can be powered via usb, so you might be tempted to plug it into the ALLS. However, ALLS USB ports aren't always live, so startup will be a race condition between the game's network check & error and your router's boot/connection. It's best to plug it into wall power instead.
 
 Total Power plugs needed: 4
+
 ALLS, TV, PCB I/O, Network Router
 
 ## Working inside the ALLS
