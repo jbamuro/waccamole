@@ -205,7 +205,7 @@ or any router that supports OpenWrt 22.03
 
 If you need wifi, Slate is the recommended one to go with. however, you *can* make mango's perform adequately with wifi on dedicated APs.
 
-
+The routers can be powered via usb, so you might be tempted to plug it into the ALLS. However, ALLS USB ports aren't always live, so startup will be a race condition between the game's network check & error and your router's boot/connection. It's best to plug it into wall power instead.
 
 Total Power plugs needed: 4
 ALLS, TV, PCB I/O, Network Router
@@ -274,6 +274,9 @@ UNKNOWN: expand the existing partition possible? would be good for the future of
 USB capture cards can be used to stream Wacca. 
 
 This will also show additional song stats on the parts of the screen that are otherwise not visible from the cab. This is the recommended one to use https://www.amazon.com/gp/product/B0BJ6XLK45 but anything 1080p60 is good, there's no EDID fuckery.
+
+Burrito has a neat Wacca Lily R stream overlay, and a Reverse version is in the works with some nice move transitions.
+
 
 Gooseneck Phone mount thing
 
