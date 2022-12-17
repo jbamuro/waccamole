@@ -154,7 +154,7 @@ https://www.lcsc.com/ is the recommended shop for these, they ship right out of 
 
 So to do the math for you, to replace all of your lights, that's 60 PCBs you need.
 ```
-60x  C782264 [these ship in multiples of 5]
+60x  C8024 [these ship in multiples of 5]
 120x C265055 [these ship in multiples of 10]
 60x  C264994 [these ship in multiples of 10]
 480x C965558 [these ship in multiples of 5]
