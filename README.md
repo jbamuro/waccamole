@@ -145,7 +145,7 @@ https://www.lcsc.com/ is the recommended shop for these, they ship right out of 
 | Footprint | Parts                  | Size | Value  | LCSC    | Remark                                      |
 | --------- | ---------------------- | ---- | ------ | ------- | --------------------------------------------|
 | C1-C8     | Not Needed             | N/A  | N/A    | N/A     | WS2813B-V5 do not require decoupling caps   |
-| C9        | Tantalum Capacitor     | 7343| 220uF   | [**C8024**](https://www.lcsc.com/product-detail/Tantalum-Capacitors_Kyocera-AVX-TAJD227K010RNJ_C8024.html) | Optional but adds protection.         |
+| C9        | Tantalum Capacitor     | 7343| 220uF   | [**C8024**](https://www.lcsc.com/product-detail/Tantalum-Capacitors_Kyocera-AVX-TAJD227K010RNJ_C8024.html) | Optional but adds protection. 10V.         |
 | CN1,CN2   | JST XA 3 pin           |      |        | [**C265055**](https://www.lcsc.com/product-detail/Wire-To-Board-Wire-To-Wire-Connector_JST-Sales-America-B03B-XASK-1-LF-SN_C265055.html) | B03B-XASK-1(LF)(SN)                         |
 | CN3       | JST XA 4 pin           |      |        | [**C264994**](https://www.lcsc.com/product-detail/Wire-To-Board-Wire-To-Wire-Connector_JST-Sales-America-B04B-XASK-1-LF-SN_C264994.html) | B04B-XASK-1(LF)(SN)                         |
 | D1-D8     | Worldsemi WS2813B-V5   |      |        | [**C965558**](https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Worldsemi-WS2813B-V5_C965558.html) |                                             |
