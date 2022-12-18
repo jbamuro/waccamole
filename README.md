@@ -220,13 +220,14 @@ To make this process much easier the second time around, it's recommended to eit
 
 ## Imaging your ALLS drive
 ALLS uses various tamper protections such as bitlocker, tpm, etc. that are provisioned from the factory. As such, you can't just stick in any drive and expect it to work, even with keychip. 
-It's a very good idea to image your drive, so you can restore it and have it work, or to just have a 2nd drive handy.
+Your drive contains your unique PCBID, so it's a very good idea to image your drive, so you can restore it and have it work, or to just have a 2nd drive handy.
+
 
 Boot Linux through a USB drive (i recommend using Linux Mint and Rufus to create the bootable USB. plenty of guides on this)
 
 Plug in an external drive if your boot USB drive isn't large enough to contain a 120gb image
 
-Plug in your wacca drive via usb sata enclosure device
+Plug in your wacca drive via usb sata enclosure device. Any sata enclosure will work, these are 2.5" drives so they don't need more than USB to power them but the ac powered 3.5" / 2.5" enclosures will be fine too.
 
 Use DD to image the drive https://linuxhint.com/make-disk-images-dd-command-linux/
 
