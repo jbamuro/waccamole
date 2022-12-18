@@ -16,13 +16,15 @@ This PDF should be pretty easy to find online, there's also a shitty version tha
 
 ## Hardware
 
-The anatomy of the cabinet an ALLS desktop connecting to a set of PCBs via two USB ports, two RS232 ports, two 3.5mm audio jacks, and digital video out to a 50 inch LCD (hdmi, displayport are supported WITH audio out). 
+The anatomy of the cabinet an ALLS desktop connecting to a set of PCBs via two USB ports, three RS232 ports, two 3.5mm audio jacks, and digital video out to a 50 inch LCD (hdmi, displayport are supported WITH audio out). 
 
 TODO: Someone should double check this and update with more accurate info, I forgot where everything terminated when it was explained to me:
 
 ALLS desktop RS232 1 --> Left Pentel PCB --> Left half of the touch controller
 
 ALLS desktop RS232 2 --> Right Pentel PCB --> Right half of the touch controller
+
+ALLS desktop RS232 3 --> AIME reader
 
 ALLS desktop USB 1 --> Sega IO
 
@@ -40,6 +42,7 @@ SSD: TDK GBDisk GS1 120GB [MDA-E0017]
 Sound Card: Realtek ALC888S
 OS: Windows 10 IoT LTSB 2016
 PSU: 400W Seasonic 80 Bronze https://www.newegg.com/seasonic-ss-400et-bronze-400w/p/N82E16817151076 [from ALLS UX, i have 0 motiviation to open this PSU to confirm] 
+https://seasonic.com/et SS-400ET
 RS232: 2 port + 1 port [Goes right to COM 1 COM 2 COM 3 on the motherboard]
 ```
 
@@ -91,6 +94,9 @@ LFA150F-5-J1Y 150W 5V 50-60Hz 30A IN AC100-240V
 ```
 These two units supply all the power needed for the PCB components (sound system, LEDs, touch controller etc).
 My photos will look a little different at the bottom as we had to jerry rig an extension cable to feed power into the unit since I don't have the original cabling for it. Works fine on American power, theoretically works fine in europe without a transformer as well based on some reports. R1 uses a 300VA step down transformer https://cdn.discordapp.com/attachments/267603668046446603/1045057845999173692/IMG_20221123_112537805_HDR.jpg but that's probably overkill.
+
+Hits about 200W during the attract.
+
 
 <b>Touch Unit Control Board (PSS-7135-L02-01) </b>
 <br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00814.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00814.JPG" width="150" height="150"/> <br>
@@ -172,7 +178,7 @@ https://www.lcsc.com/ is the recommended shop for these, they ship right out of 
 
 So to do the math for you, to replace all of your lights, that's 60 PCBs you need.
 ```
-60x  C8024 [these ship in multiples of 5]
+60x  C8024 [these ship in multiples of 1]
 120x C265055 [these ship in multiples of 10]
 60x  C264994 [these ship in multiples of 10]
 480x C965558 [these ship in multiples of 5]
@@ -219,7 +225,8 @@ or any router that supports OpenWrt 22.03
 
 If you need wifi, Slate is the recommended one to go with. however, you *can* make mango's perform adequately with wifi on dedicated APs.
 
-The routers can be powered via usb, so you might be tempted to plug it into the ALLS. However, ALLS USB ports aren't always live, so startup will be a race condition between the game's network check & error and your router's boot/connection. It's best to plug it into wall power instead.
+The routers are powered via usb, so you can plug it into the ALLS. However, ALLS USB ports aren't always live, so startup will be a race condition between the game's network check & error and your router's boot/connection, particularly if you are on a Mango. It's best to plug it into wall power instead (also on wifi, you'll want more current).  If you're wired on creta/slate, you'll be fine off ALLS usb. Something to note, having the Creta reboot every so often helps them stay connected, probably because NAT connection state loss on (an) upstream router(s).
+
 
 Total Power plugs needed: 4
 
@@ -237,7 +244,7 @@ ALLS uses various tamper protections such as bitlocker, tpm, etc. that are provi
 Your drive contains your unique PCBID, so it's a very good idea to image your drive, so you can restore it and have it work, or to just have a 2nd drive handy.
 
 
-Boot Linux through a USB drive (i recommend using Linux Mint and Rufus to create the bootable USB. plenty of guides on this)
+Boot Linux through a USB drive (i recommend using Linux Mint and Rufus to create the bootable USB. plenty of guides on this). Do NOT use Windows, this can trigger bitlocker and your drive will get wiped.
 
 Plug in an external drive if your boot USB drive isn't large enough to contain a 120gb image
 
