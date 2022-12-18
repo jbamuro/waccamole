@@ -39,7 +39,7 @@ GPU: NVIDIA GeForce GTX 1050Ti [Aetina N1050TI-L9FX]
 SSD: TDK GBDisk GS1 120GB [MDA-E0017]
 Sound Card: Realtek ALC888S
 OS: Windows 10 IoT LTSB 2016
-PSU: 400W Seasonic 80 Bronze https://www.newegg.com/seasonic-ss-400et-bronze-400w/p/N82E16817151076 [from ALLX UX, i have 0 motiviation to open this PSU to confirm] 
+PSU: 400W Seasonic 80 Bronze https://www.newegg.com/seasonic-ss-400et-bronze-400w/p/N82E16817151076 [from ALLS UX, i have 0 motiviation to open this PSU to confirm] 
 RS232: 2 port + 1 port [Goes right to COM 1 COM 2 COM 3 on the motherboard]
 ```
 
@@ -59,6 +59,24 @@ Dimensions(WxHxD)	120x90x97.5
 Total Mass	605g
 ```
 I believe these may work as a suitable replacement (at least it does for SDVX) https://www.crutchfield.com/S-nMsSvT4rfnE/p_108R6532EM/Infinity-Reference-REF-6532ex.html?omnews=17719017
+
+
+Television
+```
+Advanced Display Lab Inc.
+6F, NO.257, SINHU 2nd Rd.,
+NEI-HU DISTRICT, TAIPEI, TAIWAN
+
+Rating: 100V~240V, 50/60Hz, 0.8~3A
+Model: ADOF50NN03.0
+P/N: 1001500-102002-32
+
+InnoLux S500HJ1-LE8 Rev. C1
+09C1L1293620075
+https://www.panelook.com/S500HJ1-LE8_Innolux_50_LCM_overview_32625.html
+
+```
+
 
 ## PCB Details
 TODO: Add specific chip components
@@ -190,10 +208,6 @@ Tip: You can "grip" the ribbon to feed it back through the hole to get it back i
 Be gentle here though, broken ribbons are no fun.
 
 ## Other hardware
-
-50 inch LED
-
-I tried with a 55 inch and the circle size is not quite right. If you're using original hw, you'll need to be exactly 50 inch or get a TV with good overscan controls. I got a TCL 50S455 open box for $299.99 at bb. 
 
 Network Router
 For connecting to a private server you'll want 
