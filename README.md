@@ -93,14 +93,36 @@ LFA150F-12-J1 150W 12V 50-60Hz 12.5A IN AC100-240V
 LFA150F-5-J1Y 150W 5V 50-60Hz 30A IN AC100-240V
 ```
 These two units supply all the power needed for the PCB components (sound system, LEDs, touch controller etc).
-My photos will look a little different at the bottom as we had to jerry rig an extension cable to feed power into the unit since I don't have the original cabling for it. Works fine on American power, theoretically works fine in europe without a transformer as well based on some reports. R1 uses a 300VA step down transformer https://cdn.discordapp.com/attachments/267603668046446603/1045057845999173692/IMG_20221123_112537805_HDR.jpg but that's probably overkill.
+My photos will look a little different at the bottom as we had to jerry rig an extension cable to feed power into the unit since I don't have the original cabling for it. Works fine on American power, there are also reports of it working fine in europe. 
 
-Hits about 200W during the attract.
+R1 uses a 300VA step down transformer https://cdn.discordapp.com/attachments/267603668046446603/1045057845999173692/IMG_20221123_112537805_HDR.jpg but that's probably overkill.
+
+Hits about 200W during the attract. TODO: power info during songlist pull etc.
 
 
 <b>Touch Unit Control Board (PSS-7135-L02-01) </b>
 <br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00814.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00814.JPG" width="150" height="150"/> <br>
+<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00835.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00835.JPG" width="150" height="150"/> <br>
 The most interesting part of the PCB. Custom part made by Pentel. Two of these exist on the PCB board that process 6 channels each, to get the 2 halves of the touch controller. Each segment of the touch controller has one of these as well, with the addition of the ribbon cable to connect the segments together. 
+
+```
+7Lb176 (8BM AHP1) Differential Bus Tranceiver
+https://pdf1.alldatasheet.com/datasheet-pdf/view/28214/TI/7LB176.html
+
+FMB MB9BF 124K 1906 345 E2 ARM - Microcontroller 
+https://www.infineon.com/cms/en/product/microcontroller/fm3-32-bit-arm-cortex-m3-microcontroller-mcu-families/#!designsupport
+
+ADM 3101E ±15 kV ESD Protected, 3.3 V Single-Channel RS-232 Line Driver/Receiver 
+https://www.analog.com/en/products/adm3101e.html#product-overview
+
+178M05 91 03 Fixed Voltage Regulator
+https://datasheetspdf.com/pdf-file/614024/HitachiSemiconductor/178M05/1
+
+On the touch controller PCB with ribbon, has the addition of
+Pentel PAC-08 15A 184902 01
+Custom chip? No info online about it that I can find.
+
+```
 
 <b>LED Data board (14-1497-R)</b> 
 <br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00813.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00813.JPG" width="150" height="150"/> <br>
