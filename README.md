@@ -228,9 +228,10 @@ If you need wifi, Slate is the recommended one to go with. however, you *can* ma
 The routers are powered via usb, so you can plug it into the ALLS. However, ALLS USB ports aren't always live, so startup will be a race condition between the game's network check & error and your router's boot/connection, particularly if you are on a Mango. It's best to plug it into wall power instead (also on wifi, you'll want more current).  If you're wired on creta/slate, you'll be fine off ALLS usb. Something to note, having the Creta reboot every so often helps them stay connected, probably because NAT connection state loss on (an) upstream router(s).
 
 
-Total Power plugs needed: 4
-
+Total Power plugs needed if building from scratch: 4
 ALLS, TV, PCB I/O, Network Router
+
+On a real cab, it all feeds into a built in row of outlets (router has a power connector), and goes out 1 cord in the back. You'd still need to add your own wall wart for private server router, preferably.
 
 ## Working inside the ALLS
 You can get away with using a phillips screwdriver but you really do risk stripping the screws used here. Notice how each of the screws look like phillips but have a dot? These are JIS screws! You'll want to purchase JIS screwdrivers to use.
