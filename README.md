@@ -101,16 +101,17 @@ Hits about 200W during the attract. TODO: power info during songlist pull etc.
 
 
 <b>Touch Unit Control Board (PSS-7135-L02-01) </b>
-<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00814.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00814.JPG" width="150" height="150"/> <br>
-<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00835.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00835.JPG" width="150" height="150"/> <br>
+<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00814.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00814.JPG" width="150" height="150"/>
+<img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00835.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00835.JPG" width="150" height="150"/> <br>
 The most interesting part of the PCB. Custom part made by Pentel. Two of these exist on the PCB board that process 6 channels each, to get the 2 halves of the touch controller. Each segment of the touch controller has one of these as well, with the addition of the ribbon cable to connect the segments together. 
 
 ```
 7Lb176 (8BM AHP1) Differential Bus Tranceiver
 https://pdf1.alldatasheet.com/datasheet-pdf/view/28214/TI/7LB176.html
 
-FMB MB9BF 124K 1906 345 E2 ARM - Microcontroller 
-https://www.infineon.com/cms/en/product/microcontroller/fm3-32-bit-arm-cortex-m3-microcontroller-mcu-families/#!designsupport
+FMB (FM3?) MB9BF 124K 1906 345 E2 ARM - Microcontroller 
+maybe?
+https://www.infineon.com/cms/en/product/microcontroller/fm3-32-bit-arm-cortex-m3-microcontroller-mcu-families/
 
 ADM 3101E ±15 kV ESD Protected, 3.3 V Single-Channel RS-232 Line Driver/Receiver 
 https://www.analog.com/en/products/adm3101e.html#product-overview
