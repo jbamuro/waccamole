@@ -225,8 +225,13 @@ Get some solder paste and apply it to the PCB using the stencil (spread over ste
 ### Replacing the board on the touch panel
 
 
-Remove the control panel with single screw on the left and right side. You don't need to remove the acrylic, just unplug the harnesses. Unplug, feed them up, slide the control panel out.
+Remove the control panel with single screw on the left and right side. 
+
 https://cdn.discordapp.com/attachments/780283383069540393/1054935055333605457/PXL_20221221_013513863.jpg
+
+You don't need to remove the acrylic, just unplug the harnesses. Unplug, feed them up, slide the control panel out.
+
+https://cdn.discordapp.com/attachments/780283383069540393/1054948737845301338/PXL_20221221_022911966.jpg
 
 After you have the outside plastic pieces taken off, disconnect the led data only wires, LED power on the middle LED board, and the touch board cable.  Then remove the two outside screws for the panel and pull it straight out
 
@@ -241,6 +246,8 @@ Place in the new PCB and screw everything back together
 Tip: You can "grip" the ribbon to feed it back through the hole to get it back into the pcb by using painter's tape. 
 Be gentle here though, broken ribbons are no fun.
 
+Note: You may need to remove the pop / marquee to get to the touch panels on the top of the machine. This may require security torx bits (not all cabs have security torx for some reason)
+ 
 If the cab is powered on you will need to go to "connection test of touch devices " and "reconnect touch devices" in the test menu after re-connecting the touch board
 
 Video instructions: https://youtu.be/iyhxQFl7XyE
