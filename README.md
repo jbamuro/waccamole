@@ -166,7 +166,7 @@ There's two good options for reproducing a better version
 1) Isola has a WS2813 design which can be just popped into your touch controller without any issue (it will however, look brighter than the 2812's so consider a full swap) https://github.com/mnm-isola/wacca_ws2813
 Note that at the time of writing, the most recent revision's gerbers are actually the previous revision. I would recommend downloading the project from https://github.com/mnm-isola/wacca_ws2813/tree/main/wacca_ws2813_rev20220814 and opening it in kicad and making your own gerber. Detailed instructions below.
 
-2) Speedy labs is selling their revision of the PCB https://www.speedylabs.us/product/wacca-ws2813-led-pcb/ you'll need 60 of them to replace all your touch units. There is a europe equivalent vendor []
+2) Speedy labs is selling their revision of the PCB https://www.speedylabs.us/product/wacca-ws2813-led-pcb/ you'll need 60 of them to replace all your touch units. CensoredUsername is another source for the EU https://docs.google.com/forms/d/e/1FAIpQLSfETDKtABUGxhhcBXFDWuHlz1cwHNNozOXztCPOOsENcN5KxA/viewform
 
 As a sidenote, it would be interesting to see someone make a APA102 variant of the LED PCBs on an ASC.
 
@@ -332,7 +332,7 @@ then restore using
 
   `sudo dd if=<wacca.img> of=<newdrive> bs=100M conv=noerror`
 
-There will be no problems with base functionality from imaging this on a larger drive.
+You'll want to restore on a 120gb or at most 240gb drive to be compatible with how a main storage format works at the moment. (but if you aren't doing that, any larger sized ssd can work)
 
 UNKNOWN: expand the existing partition possible? would be good for the future of wacca+ / omnimix etc.
 
