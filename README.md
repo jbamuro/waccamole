@@ -32,14 +32,14 @@ ALLS desktop USB 2 --> LED Data board
 
 
 WACCA Serial Port Map
-
+```
 COM1: Aime Reader
 COM2: AimePay VFD (the little unused display)
 COM3: Console Touch (Right)
 COM4: Console Touch (Left)
 COM5: Keychip
 COM6: Console Lights
-
+```
 
 The desktop is a 
 ```
