@@ -31,6 +31,16 @@ ALLS desktop USB 1 --> Sega IO
 ALLS desktop USB 2 --> LED Data board
 
 
+WACCA Serial Port Map
+
+COM1: Aime Reader
+COM2: AimePay VFD (the little unused display)
+COM3: Console Touch (Right)
+COM4: Console Touch (Left)
+COM5: Keychip
+COM6: Console Lights
+
+
 The desktop is a 
 ```
 ALLS HX [849-0006]
@@ -109,9 +119,9 @@ The most interesting part of the PCB. Custom part made by Pentel. Two of these e
 7Lb176 (8BM AHP1) Differential Bus Tranceiver
 https://pdf1.alldatasheet.com/datasheet-pdf/view/28214/TI/7LB176.html
 
-FMB (FM3?) MB9BF 124K 1906 345 E2 ARM - Microcontroller 
-maybe?
-https://www.infineon.com/cms/en/product/microcontroller/fm3-32-bit-arm-cortex-m3-microcontroller-mcu-families/
+FM3 MB9BF124K 1906 345 E2 ARM - Microcontroller 
+https://www.infineon.com/dgdl/Infineon-32-Bit_Microcontroller_FM3_Family_Peripheral_Manual_Main_Part-UserManual-v01_00-EN.pdf?fileId=8ac78c8c7ddc01d7017e6768894f57d0
+For pinouts see page 12 (LQFP-48) https://www.infineon.com/dgdl/Infineon-CY9B120M_Series_32_Bit_Arm_Cortex_M3_FM3_Microcontroller-DataSheet-v10_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0edfa79064e9
 
 ADM 3101E ±15 kV ESD Protected, 3.3 V Single-Channel RS-232 Line Driver/Receiver 
 https://www.analog.com/en/products/adm3101e.html#product-overview
@@ -119,9 +129,15 @@ https://www.analog.com/en/products/adm3101e.html#product-overview
 178M05 91 03 Fixed Voltage Regulator
 https://datasheetspdf.com/pdf-file/614024/HitachiSemiconductor/178M05/1
 
+op amps AD8616 
+https://www.mouser.com/ProductDetail/Analog-Devices/AD8616?qs=5aG0NVq1C4yTdSCFgWCNCg%3D%3D
+
 On the touch controller PCB with ribbon, has the addition of
 Pentel PAC-08 15A 184902 01
 Custom chip? No info online about it that I can find.
+
+The connector used is Hirose HIF3BA 
+https://ie.rs-online.com/web/p/pcb-headers/8960809
 
 ```
 
