@@ -373,3 +373,12 @@ You will want to wear gloves to play the game because you *will* burn the skin o
 Custom charts. 
 
 A charter exists here: https://github.com/Goatgarien/BAKKA-Editor/ and custom song injection is fully working. Join their discord for more information.
+
+### Enabling front panel headphone jack on Fresh Windows Install 
+
+Download realtek audio driver from https://www.gigabyte.com/Enterprise/Embedded-Computing/MDH11BM-rev-10#Support
+Open realtek manager
+Remap ports based on sticker (front/rear)
+Enable the Quadraphonic layout
+
+<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/realtek.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/realtek.png" width="371" height="1251"/> <br>
