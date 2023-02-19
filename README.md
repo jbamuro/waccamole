@@ -376,9 +376,9 @@ A charter exists here: https://github.com/Goatgarien/BAKKA-Editor/ and custom so
 
 ### Enabling front panel headphone jack on Fresh Windows Install 
 
-Download realtek audio driver from https://www.gigabyte.com/Enterprise/Embedded-Computing/MDH11BM-rev-10#Support
-Open realtek manager
-Remap ports based on sticker (front/rear)
-Enable the Quadraphonic layout
+Download realtek audio driver from https://www.gigabyte.com/Enterprise/Embedded-Computing/MDH11BM-rev-10#Support <br>
+Open realtek manager <br>
+Remap ports based on sticker (front/rear) <br>
+Enable the Quadraphonic layout <br>
 
 <br><img src="https://github.com/jbamuro/waccamole/raw/main/img/realtek.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/realtek.png" width="371" height="1251"/> <br>
