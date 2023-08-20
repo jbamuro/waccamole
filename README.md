@@ -143,8 +143,28 @@ https://ie.rs-online.com/web/p/pcb-headers/8960809
 
 <b>LED Data board (14-1497-R)</b> 
 <br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00813.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00813.JPG" width="150" height="150"/> <br>
-This sends the pretty colors to the touch controller and card reader panel?
+This sends the pretty colors to the touch controller.
 
+Attempts to swap the board to an Adafruit FT232H breakout board to replace LED driver ongoing, Wacca LED tests pass fine, but no data seems to be sent out from pin 14.
+
+```
+IC1: FTDI FT232HL - Single Channel HiSpeed USB to Multipurpose UART/FIFO IC
+Datasheet: https://ftdichip.com/wp-content/uploads/2020/07/DS_FT232H.pdf
+
+IC2: (93lc56b 6 pin?) eeprom for USB descriptor and VID/PID
+Datasheet: https://www.microchip.com/en-us/product/93lc56b
+
+IC3: B86J (sn74ahct1g86) Single 2-Input XOR Gate
+Datasheet: https://www.ti.com/lit/ds/symlink/sn74ahct1g86.pdf
+
+	Additional info:
+IC3 Pin# 1 - MOSI from FT232HL (Pin 14)
+IC3 Pin# 2 - trace runs to one pad of R10, through R11 (10k ohm resistor), to ground
+IC3 Pin# 3 - Ground
+IC3 Pin# 4 - LED data out into R12 (100 ohm resistor) to CN2 (LED Data/Ground out)
+IC3 Pin# 5 - (5v?) VCC in
+
+```
 
 <b>2.1 channel AMP (14-1466CR) </b>
 <br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00816.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00816.JPG" width="150" height="150"/> <br>
