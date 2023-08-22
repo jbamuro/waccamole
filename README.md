@@ -126,13 +126,14 @@ Hits about 200W during the attract. TODO: power info during songlist pull etc.
 **Touch Unit Control Boards (PSS-7135-L02-01)**
 There are two of these and they each process 6 segments. Together they control the two halves of the touch controller assembly (for a total of 12 segments).
 
-![Touch Unit Control Board](https://github.com/jbamuro/waccamole/raw/main/img/DSC00814.JPG "Touch Unit Control Board for the 6 segments on the right of the touch assembly (Can be determined thanks to it's ID, currently set to 8. The controller ID for the left segments is 7)")
+![Master Touch Unit Control Board](https://github.com/jbamuro/waccamole/raw/main/img/DSC00814.JPG "Master Touch Unit Control Board for the 6 segments on the right of the touch assembly (Can be determined thanks to it's ID, currently set to 8. The controller ID for the left segments is 7)")
 
 Each segment of the touch controller is connected to the others with the help of RS485 through a ribbon cable.
 The PCBs present on each segment are the exact same with the addition of a custom Pentel IC and some extra components needed to drive the tactile sensor array.
 ![Pentel IC](https://github.com/jbamuro/waccamole/raw/main/img/DSC00835.JPG "The custom Pentel IC handling tactile input")
 
-*Here's a detailed component list of those PCBs :*
+*Here's a detailed component list of those boards :*
+![Touch Unit Control Board](https://cdn.discordapp.com/attachments/568491469799817246/1143576271461302333/Top_View.jpg "Top view of the PCB")
 
 | Component | Reference         | Comment  |
 | --------- | ----------------- | -------- |
@@ -142,8 +143,8 @@ The PCBs present on each segment are the exact same with the addition of a custo
 | U5        | [7Lb176 (8BM AHP1)](https://pdf1.alldatasheet.com/datasheet-pdf/view/28214/TI/7LB176.html) | Differential Bus Tranceiver |
 | U7 / U8   | [AD8616](https://www.mouser.com/ProductDetail/Analog-Devices/AD8616?qs=5aG0NVq1C4yTdSCFgWCNCg%3D%3D) | Analog Op Amps |
 | CN4       | [Hirose HIF3BA](https://ie.rs-online.com/web/p/pcb-headers/8960809) | Used to connect all boards to each other using a ribbon |
-| CN6       | 22 pin 1mm pitch FFC/FPC Connector | This is a generic part |
-| SW1       | 9 Way binary coded rotary switch | This is a generic part |
+| CN6       | 22 pin 1mm pitch FFC/FPC Connector | Generic part |
+| SW1       | 9 Way binary coded rotary switch | Generic part |
 | RG1       | XC6206 662K 3.3V 0.5A Voltage regulator | 3.3V 0.5A Voltage regulator |
 | RG2       | [178M05 91 03](https://datasheetspdf.com/pdf-file/614024/HitachiSemiconductor/178M05/1) | 5V 0.5A Fixed Voltage regulator |
 
@@ -232,6 +233,8 @@ Here are some scans of a segment that shows the curve profile.
 <br><img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve1.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve1.png" width="150" height="150"/>
 <img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve2.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve2.png" width="150" height="150"/>
 <img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve3.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve3.png" width="150" height="150"/>
+
+<br>
 
 # Replacement LED PCBs
 
@@ -407,6 +410,8 @@ then restore using
 You'll want to restore on a 120gb or at most 240gb drive to be compatible with how a main storage format works at the moment. (but if you aren't doing that, any larger sized ssd can work)
 
 UNKNOWN: expand the existing partition possible? would be good for the future of wacca+ / omnimix etc.
+
+<br>
 
 # Other
 
