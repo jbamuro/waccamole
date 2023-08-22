@@ -145,7 +145,37 @@ https://ie.rs-online.com/web/p/pcb-headers/8960809
 <br><img src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00813.JPG" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/DSC00813.JPG" width="150" height="150"/> <br>
 This sends the pretty colors to the touch controller.
 
-Attempts to swap the board to an Adafruit FT232H breakout board to replace LED driver ongoing, Wacca LED tests pass fine, but no data seems to be sent out from pin 14.
+Custom LED Driver replacement instructions and pcb link.
+<details><summary>Click to expand</summary>
+  
+[Adafruit FT232H Breakout](https://www.adafruit.com/product/2264)
+
+[FT_PROG EEPROM programmer](https://ftdichip.com/wp-content/uploads/2023/08/FT_Prog_v3.12.37.642-Installer.exe_.zip)
+
+<details><summary>Flashing Instructions.</summary>
+Ensure the FTDI d2xx drivers are installed and the FT232H board is the only FTDI device connected to your computer (verify this by opening Device Manager and inspecting each device under the COM & LPT ports drop down if you're unsure).
+
+Open FT_PROG and navigate to "DEVICES" > "Scan and Parse" you will see a new device populate in the device tree.
+
+Click on the device in the tree and verify "Chip Type:" is 'FT232H' as this will be the Adafruit board.
+
+Navigate to "USB String Descriptors" under the "FT EEPROM" section of the Device tree and change the "Product Description" field to "Single RS232-HS" and ensure the Serial Number field is blank, and the Serial Number Enabled box is unchecked.
+
+Navigate to the "Driver" tab in the device tree under "Hardware Specific" > "Port A" and ensure "Virtual COM Port" is the checked option and D2XX Direct is not selected.
+
+Right click the root Device in the device tree and click "Program Device"
+
+Once the programming has been completed disconnect the USB cable and reconnect it.
+
+Open your Windows Device Manager if it is not already and navigate to "USB Serial Converter" Under the "Universal Serial Bus Controllers" click Properties and navigate to the "Advanced" tab, ensure "Load VCP" is checked. Close the window and disconnect the USB cable and reconnect it.
+
+Within the Device manager navigate to "USB Serial Port (COM*)" under "Ports (COM & LPT)" right click, select "Properties" > "Port Settings" > "Advanced" > "COM Port Number" and select "COM6" disconnect the USB cable and reconnect it.
+
+Connect a wire to GND for LED Ground, and a wire to pin D1 for LED Data
+
+Load the game and you should have LED activity disaplaying if everything is configured correctly.
+</details>
+</details>
 
 ```
 IC1: FTDI FT232HL - Single Channel HiSpeed USB to Multipurpose UART/FIFO IC
