@@ -220,11 +220,11 @@ Each one of these weighs 1kg (2.2LBS) *(870g if the metal bracket is removed)* w
 Each unit has 5 LED strips (each strip has 8 LEDs making for a total of 40 LEDs per segment). In total, there are 480 LEDs in the touch controller assembly
 
 The sensor array is made out of 5 columns and 4 rows amounting to 20 touch zones par segment. All 12 segments amount to a total of 240 touch zones.
-
-![Wacca touch sensor array](https://cdn.discordapp.com/attachments/568491469799817246/1143556836197408768/Wacca_Sensor_Flexible_PCB.png "A segment's touch sensor array. There are 12 of these.")
+![Wacca sensor array](https://cdn.discordapp.com/attachments/568491469799817246/1143575566423969812/Wacca_Sensor_Flexible_PCB_Lowres.png "A segment's touch sensor array. There are 12 of these.")
+Click [here](https://cdn.discordapp.com/attachments/297114097546297354/1068442545727746078/Wacca_Sensor_Flexible_PCB-1.png) to download a higher resolution image.
 
 Somehow I never really understood how MASSIVE these units are until I held an individual segment in my hand.
-![This shit is massive](https://media.discordapp.net/attachments/568491469799817246/1143563743557591070/PXL_20230822_151247219.jpg?width=352&height=468 "")
+![This shit is massive](https://media.discordapp.net/attachments/568491469799817246/1143563743557591070/PXL_20230822_151247219.jpg "")
 
 ---
 
