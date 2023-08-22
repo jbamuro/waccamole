@@ -153,7 +153,7 @@ Custom LED Driver replacement instructions and pcb link.
 [FT_PROG EEPROM programmer](https://ftdichip.com/wp-content/uploads/2023/08/FT_Prog_v3.12.37.642-Installer.exe_.zip)
 
 <details><summary>Flashing Instructions.</summary>
-```Ensure the FTDI d2xx drivers are installed and the FT232H board is the only FTDI device connected to your computer (verify this by opening Device Manager and inspecting each device under the COM & LPT ports drop down if you're unsure).
+Ensure the FTDI d2xx drivers are installed and the FT232H board is the only FTDI device connected to your computer (verify this by opening Device Manager and inspecting each device under the COM & LPT ports drop down if you're unsure).
 
 Open FT_PROG and navigate to "DEVICES" > "Scan and Parse" you will see a new device populate in the device tree.
 
@@ -173,7 +173,7 @@ Within the Device manager navigate to "USB Serial Port (COM*)" under "Ports (COM
 
 Connect a wire to GND for LED Ground, and a wire to pin D1 for LED Data
 
-Load the game and you should have LED activity disaplaying if everything is configured correctly.```
+Load the game and you should have LED activity disaplaying if everything is configured correctly.
 </details>
 </details>
 
