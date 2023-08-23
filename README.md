@@ -2,6 +2,44 @@
 
 Info dump related to the hardware/firmware/etc of ワッカ
 
+## Table of contents
+- [Wacca documentation](#wacca-documentation)
+  - [Table of contents](#table-of-contents)
+  - [Disclaimer](#disclaimer)
+  - [Service manual](#service-manual)
+- [Hardware](#hardware)
+  - [USB/Serial Connections Breakdown](#usbserial-connections-breakdown)
+  - [WACCA Serial Port Map](#wacca-serial-port-map)
+  - [Desktop specifications](#desktop-specifications)
+  - [Sound system](#sound-system)
+  - [Television](#television)
+  - [Power supplies](#power-supplies)
+- [PCB Details](#pcb-details)
+  - [Touch Unit Control Boards (PSS-7135-L02-01)](#touch-unit-control-boards-pss-7135-l02-01)
+  - [LED Data board (14-1497-R)](#led-data-board-14-1497-r)
+    - [Custom LED Driver](#custom-led-driver)
+  - [2.1 channel AMP (14-1466CR)](#21-channel-amp-14-1466cr)
+  - [Headphone AMP (00-1358AR)](#headphone-amp-00-1358ar)
+  - [I/O Control Board (837-15257-01)](#io-control-board-837-15257-01)
+  - [Card reader panel "ASSY CTRL PNL"](#card-reader-panel-assy-ctrl-pnl)
+  - [Touch Controller \& Sensor array](#touch-controller--sensor-array)
+- [Replacement LED PCBs](#replacement-led-pcbs)
+  - [Details on manufacturing your own LED PCBs](#details-on-manufacturing-your-own-led-pcbs)
+  - [BOM (for use with WS2813B-V5)](#bom-for-use-with-ws2813b-v5)
+  - [Soldering it all together](#soldering-it-all-together)
+  - [Replacing the board on the touch panel](#replacing-the-board-on-the-touch-panel)
+- [Other](#other)
+  - [Network Router](#network-router)
+  - [Working inside the ALLS](#working-inside-the-alls)
+  - [Imaging your ALLS drive](#imaging-your-alls-drive)
+  - [USB capture cards](#usb-capture-cards)
+  - [Gooseneck Phone mount thing](#gooseneck-phone-mount-thing)
+  - [Gloves](#gloves)
+  - [Custom charts](#custom-charts)
+  - [Enabling front panel headphone jack on Fresh Windows Install](#enabling-front-panel-headphone-jack-on-fresh-windows-install)
+
+</details>
+
 ## Disclaimer
 
 Some information here is sourced from around the internet, of which I'm not sure if people wish to be credited for. You know who you are, let me know.
@@ -11,13 +49,20 @@ Many parts simply have not been extensively documented or are kept in private ci
 ## Service manual
 
 This PDF should be pretty easy to find online, there's also a shitty version that was fed through DEEPL to machine translate into english. This has a plethora of information that I won't directly post here since that's probably asking for a DMCA violation even for a dead game.
+
+---
+
 <br>
 
 # Hardware
 
+![Wacca I/O board](https://github.com/jbamuro/waccamole/raw/main/img/DSC00811.JPG)
+
 The anatomy of the cabinet an ALLS desktop connecting to a set of PCBs via two USB ports, three RS232 ports, two 3.5mm audio jacks, and digital video out to a 50 inch LCD (hdmi, displayport are supported WITH audio out).
 
-*TODO: Someone should double check this and update with more accurate info, I forgot where everything terminated when it was explained to me:*
+You can find a list of various informations related to the wacca hardware below.
+
+## USB/Serial Connections Breakdown
 
 ```text
 ALLS desktop RS232 1 --> Left Pentel PCB --> Left half of the touch controller
@@ -28,9 +73,7 @@ ALLS desktop USB 1 --> Sega IO
 ALLS desktop USB 2 --> LED Data board
 ```
 
----
-
-WACCA Serial Port Map :
+## WACCA Serial Port Map
 
 ```text
 COM1: Aime Reader
@@ -41,9 +84,7 @@ COM5: Keychip
 COM6: Console Lights
 ```
 
----
-
-Desktop specifications :
+## Desktop specifications
 
 ```text
 ALLS HX [849-0006]
@@ -59,9 +100,7 @@ https://seasonic.com/et SS-400ET
 RS232: 2 port + 1 port [Goes right to COM 1 COM 2 COM 3 on the motherboard]
 ```
 
----
-
-Sound system :
+## Sound system
 
 ```text
 Subwoofer: S02012D0 4OHM 40W ????
@@ -78,11 +117,7 @@ Dimensions(WxHxD)	120x90x97.5
 Total Mass	605g
 ```
 
-I believe [these](<https://www.crutchfield.com/S-nMsSvT4rfnE/p_108R6532EM/Infinity-Reference-REF-6532ex.html?omnews=17719017>) may work as a suitable replacement (at least they are for SDVX)
-
----
-
-Television :
+## Television
 
 ```text
 Advanced Display Lab Inc.
@@ -96,44 +131,45 @@ P/N: 1001500-102002-32
 InnoLux S500HJ1-LE8 Rev. C1
 09C1L1293620075
 https://www.panelook.com/S500HJ1-LE8_Innolux_50_LCM_overview_32625.html
-
 ```
 
-<br>
-
-# PCB Details
-
-![Wacca I/O board](https://github.com/jbamuro/waccamole/raw/main/img/DSC00811.JPG)
-
-**Power supplies:**
-
-![Power supplies](https://github.com/jbamuro/waccamole/raw/main/img/DSC00812.JPG)
+## Power supplies
 
 ```text
 LFA150F-12-J1 150W 12V 50-60Hz 12.5A IN AC100-240V
 LFA150F-5-J1Y 150W 5V 50-60Hz 30A IN AC100-240V
 ```
 
+![Power supplies](https://github.com/jbamuro/waccamole/raw/main/img/DSC00812.JPG)
+
 These two units supply all the power needed for the PCB components (sound system, LEDs, touch controller etc).
 My photos will look a little different at the bottom as we had to jerry rig an extension cable to feed power into the unit since I don't have the original cabling for it. Works fine on American power, there are also reports of it working fine in europe.
 
-R1 uses a 300VA [step down transformer](https://cdn.discordapp.com/attachments/267603668046446603/1045057845999173692/IMG_20221123_112537805_HDR.jpg) but that's probably overkill.
+R1 uses a 300VA but that's probably overkill.
 
-Hits about 200W during the attract. TODO: power info during songlist pull etc.
+![step down transformer](https://cdn.discordapp.com/attachments/267603668046446603/1045057845999173692/IMG_20221123_112537805_HDR.jpg)
+
+Hits about 200W during attract mode.
+TODO: power info during songlist pull etc.
 
 ---
 
-**Touch Unit Control Boards (PSS-7135-L02-01)**
+<br>
+
+# PCB Details
+
+## Touch Unit Control Boards (PSS-7135-L02-01)
+
 There are two of these and they each process 6 segments. Together they control the two halves of the touch controller assembly (for a total of 12 segments).
 
 ![Master Touch Unit Control Board](https://github.com/jbamuro/waccamole/raw/main/img/DSC00814.JPG "Master Touch Unit Control Board for the 6 segments on the right of the touch assembly (Can be determined thanks to it's ID, currently set to 8. The controller ID for the left segments is 7)")
 
 Each segment of the touch controller is connected to the others with the help of RS485 through a ribbon cable.
 The PCBs present on each segment are the exact same with the addition of a custom Pentel IC and some extra components needed to drive the tactile sensor array.
+
 ![Pentel IC](https://github.com/jbamuro/waccamole/raw/main/img/DSC00835.JPG "The custom Pentel IC handling tactile input")
 
 *Here's a detailed component list of those boards :*
-![Touch Unit Control Board](https://cdn.discordapp.com/attachments/568491469799817246/1143576271461302333/Top_View.jpg "Top view of the PCB")
 
 | Component | Reference         | Comment  |
 | --------- | ----------------- | -------- |
@@ -148,22 +184,49 @@ The PCBs present on each segment are the exact same with the addition of a custo
 | RG1       | XC6206 662K 3.3V 0.5A Voltage regulator | 3.3V 0.5A Voltage regulator |
 | RG2       | [178M05 91 03](https://datasheetspdf.com/pdf-file/614024/HitachiSemiconductor/178M05/1) | 5V 0.5A Fixed Voltage regulator |
 
+<details><summary>Click to show a Top View picture of the PCB</summary>
+
+![Touch Unit Control Board](https://cdn.discordapp.com/attachments/568491469799817246/1143576271461302333/Top_View.jpg "Top view of the PCB")
+
+</details>
+
 <br>
 
----
 
-**LED Data board (14-1497-R)**
+## LED Data board (14-1497-R)
+
+It sends the pretty colors to the touch controller.
+
 ![LED Data board](https://github.com/jbamuro/waccamole/raw/main/img/DSC00813.JPG "An LED Data board, connected to the ALLS using usb")
-This sends the pretty colors to the touch controller.
 
-Custom LED Driver replacement instructions and pcb link.
-<details><summary>Click to expand</summary>
-  
-[Adafruit FT232H Breakout](https://www.adafruit.com/product/2264)
+Here's a rundown of what this board is made out of :
 
-[FT_PROG EEPROM programmer](https://ftdichip.com/wp-content/uploads/2023/08/FT_Prog_v3.12.37.642-Installer.exe_.zip)
+| Component | Reference         | Comment  |
+| --------- | ----------------- | -------- |
+| IC1 | [FT232HL FTDI](https://ftdichip.com/wp-content/uploads/2020/07/DS_FT232H.pdf) | Single Channel HiSpeed USB to Multipurpose UART/FIFO IC |
+| IC2 | [93LC56B](https://www.microchip.com/en-us/product/93lc56b) | EEPROM for USB descriptor and VID/PID, 6 pin variant  |
+| IC3 | [SN74AHCT1G86](https://www.ti.com/lit/ds/symlink/sn74ahct1g86.pdf) | Single 2-Input XOR Gate |
 
-<details><summary>Flashing Instructions.</summary>
+```text
+ Additional info:
+IC3 Pin# 1 - MOSI from FT232HL (Pin 14)
+IC3 Pin# 2 - trace runs to one pad of R10, through R11 (10k ohm resistor), to ground
+IC3 Pin# 3 - Ground
+IC3 Pin# 4 - LED data out into R12 (100 ohm resistor) to CN2 (LED Data/Ground out)
+IC3 Pin# 5 - 5V, VCC in
+```
+
+### Custom LED Driver
+
+If you want to make a custom LED Driver replacement, instructions, software and adapter link are below.
+
+![Wacca LEDs](https://cdn.discordapp.com/attachments/568491469799817246/1144020876740808824/PXL_20230822_121850510.jpg "Look at how pretty this is ! (don't mind the weird LED strip on the right)")
+
+The ftdi adapter we use is an [Adafruit FT232H](https://www.adafruit.com/product/2264) To flash it with the proper firmware you'll need the [FT_PROG EEPROM programmer](https://ftdichip.com/wp-content/uploads/2023/08/FT_Prog_v3.12.37.642-Installer.exe_.zip) software
+
+The flashing instructions are as follows :
+
+```text
 Ensure the FTDI d2xx drivers are installed and the FT232H board is the only FTDI device connected to your computer (verify this by opening Device Manager and inspecting each device under the COM & LPT ports drop down if you're unsure).
 
 Open FT_PROG and navigate to "DEVICES" > "Scan and Parse" you will see a new device populate in the device tree.
@@ -185,43 +248,20 @@ Within the Device manager navigate to "USB Serial Port (COM*)" under "Ports (COM
 Connect a wire to GND for LED Ground, and a wire to pin D1 for LED Data
 
 Load the game and you should have LED activity disaplaying if everything is configured correctly.
-</details>
-</details>
-
-```
-IC1: FTDI FT232HL - Single Channel HiSpeed USB to Multipurpose UART/FIFO IC
-Datasheet: https://ftdichip.com/wp-content/uploads/2020/07/DS_FT232H.pdf
-
-IC2: (93lc56b 6 pin?) eeprom for USB descriptor and VID/PID
-Datasheet: https://www.microchip.com/en-us/product/93lc56b
-
-IC3: B86J (sn74ahct1g86) Single 2-Input XOR Gate
-Datasheet: https://www.ti.com/lit/ds/symlink/sn74ahct1g86.pdf
-
-	Additional info:
-IC3 Pin# 1 - MOSI from FT232HL (Pin 14)
-IC3 Pin# 2 - trace runs to one pad of R10, through R11 (10k ohm resistor), to ground
-IC3 Pin# 3 - Ground
-IC3 Pin# 4 - LED data out into R12 (100 ohm resistor) to CN2 (LED Data/Ground out)
-IC3 Pin# 5 - (5v?) VCC in
-
 ```
 
----
+## 2.1 channel AMP (14-1466CR)
 
-**2.1 channel AMP (14-1466CR)**
 ![2.1 channel AMP](https://github.com/jbamuro/waccamole/raw/main/img/DSC00816.JPG "2.1 channel AMP (14-1466CR), Handles analog sound routing to subwoofer and tweeters")
 Handles analog sound routing to subwoofer and tweeters
 
----
+## Headphone AMP (00-1358AR)
 
-**Headphone AMP (00-1358AR)**
 ![Headphone Amplifier](https://github.com/jbamuro/waccamole/raw/main/img/DSC00815.JPG "Headphone Amplifier (00-1358AR), Handles audio output to the control panel")
 Handles audio output to the control panel
 
----
+## I/O Control Board (837-15257-01)
 
-**I/O Control Board (837-15257-01)**
 ![I/O Control Board](https://github.com/jbamuro/waccamole/raw/main/img/DSC00817.JPG)
  The existence of this board is a bit overkill for what it's used for, likely it *had* to be used due to Sega producing the cabinets for Marvelous. This is a newer version of the control board that has a USB port on it, almost all sega cabs use this now.
 
@@ -238,7 +278,7 @@ This giant metal LED lined panel has [4] plugs that connect to
 
 The coin entry stuff connected to the cash box is here too.
 
-## Touch Controller
+## Touch Controller & Sensor array
 
 The touch controller assembly is composed of 12 segments divided into two halves (6 per side, each having their own main controller board). They each have an individual channel ranging from 1 to 6.
 
@@ -246,7 +286,6 @@ The touch controller assembly is composed of 12 segments divided into two halves
 
 Each one of these weighs 1kg (2.2LBS) *(870g if the metal bracket is removed)* which totals to about 12kg (26LBS).
 
----
 
 Each unit has 5 LED strips (each strip has 8 LEDs making for a total of 40 LEDs per segment). In total, there are 480 LEDs in the touch controller assembly
 
@@ -257,12 +296,13 @@ Click [here](https://cdn.discordapp.com/attachments/297114097546297354/106844254
 Somehow I never really understood how MASSIVE these units are until I held an individual segment in my hand.
 ![This shit is massive](https://media.discordapp.net/attachments/568491469799817246/1143563743557591070/PXL_20230822_151247219.jpg "")
 
----
 
 Here are some scans of a segment that shows the curve profile.
 <br><img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve1.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve1.png" width="150" height="150"/>
 <img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve2.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve2.png" width="150" height="150"/>
 <img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve3.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve3.png" width="150" height="150"/>
+
+---
 
 <br>
 
@@ -360,10 +400,15 @@ If the cab is powered on you will need to go to "connection test of touch device
 
 Video instructions: <https://youtu.be/iyhxQFl7XyE>
 
-## Other hardware
+---
 
-Network Router
-For connecting to a private server you'll want
+<br>
+
+# Other
+
+## Network Router
+
+For connecting to a private server you'll want one of the following
 
 - GL.iNet GL-AR750 (Creta)
 - GL.iNet GL-AR750S (Slate)
@@ -382,7 +427,7 @@ On a real cab, it all feeds into a built in row of outlets (router has a power c
 
 ## Working inside the ALLS
 
-You can get away with using a phillips screwdriver but you really do risk stripping the screws used here. Notice how each of the screws look like phillips but have a dot? These are JIS screws! You'll want to purchase JIS screwdrivers to use.
+You can get away with using a phillips screwdriver but you really do risk stripping the screws used here. Noticed how each of the screws look like phillips but have a dot? These are JIS screws! You'll want to purchase JIS screwdrivers to use.
 
 The main interest in opening the ALLS is getting to the solid state drive that's inside. It's a bit of a pain but you don't have to disassemble too much of it to be able to get it out (I was able to strain the ATX connector a bit to unscrew the drive without tampering any cable ties).
 
@@ -401,7 +446,9 @@ Plug in your wacca drive via usb sata enclosure device. Any sata enclosure will 
 
 Use DD to image the drive <https://linuxhint.com/make-disk-images-dd-command-linux/>
 
-tl;dr
+<details><summary>Confused? Click here for a line by line tutorial of this procedure</summary>
+
+Begin by installing lsscsi.
 
 `sudo apt install lsscsi`
 
@@ -429,7 +476,7 @@ we want to access the wacca drive. replace `/dev/sd<wacca-drive>` with whatever 
 
   Checks permission of the drive, should match the original
 
-  `fdisk -; wacca.img`
+  `fdisk -l wacca.img`
 
   To compare the sector count, should match the original
 
@@ -440,12 +487,11 @@ then restore using
 You'll want to restore on a 120gb or at most 240gb drive to be compatible with how a main storage format works at the moment. (but if you aren't doing that, any larger sized ssd can work)
 
 UNKNOWN: expand the existing partition possible? would be good for the future of wacca+ / omnimix etc.
+</details>
 
-<br>
+## USB capture cards
 
-# Other
-
-USB capture cards can be used to stream Wacca.
+They can be used to stream Wacca.
 
 This will also show additional song stats on the parts of the screen that are otherwise not visible from the cab. This is the recommended one to use <https://www.amazon.com/gp/product/B0BJ6XLK45> but anything 1080p60 is good, there's no EDID fuckery.
 
@@ -454,11 +500,19 @@ Burrito has a neat Wacca Lily R stream overlay, and a Reverse version is in the 
 ## Gooseneck Phone mount thing
 
 There's a little bracket on the top right of your machine that is designed for you to clamp a gooseneck phone mount onto to record gameplay.
+
 TODO: Update this with a recommended mount that has appropriate length etc.
 
 ## Gloves
 
-You will want to wear gloves to play the game because you *will* burn the skin on your fingertips from doing slides on the acrylic. Any cotton gloves are recommended, lots of people like the white gloves available at Daiso. Thick or thin gloves depending on your preference, I like thin but people want to feel less friction from the touch segments and so they go thick. If you wanna go full Wacca, the custom gloves made by marv are OEM these <https://www.amazon.co.jp/-/en/gp/product/B0767CMNDQ/> <https://www.amazon.co.jp/-/en/gp/product/B07DJ2KJ1S/>(these are thin, and won't last long). I have a vector trace of the wacca gloves.
+You will want to wear gloves to play the game because you *will* burn the skin on your fingertips from doing slides on the acrylic. Any cotton gloves are recommended, lots of people like the white gloves available at Daiso. Thick or thin gloves depending on your preference, I like thin but people want to feel less friction from the touch segments and so they go thick.
+
+If you wanna go full Wacca, the custom gloves made by marv are OEM these :
+<https://www.amazon.co.jp/-/en/gp/product/B0767CMNDQ/>
+<https://www.amazon.co.jp/-/en/gp/product/B07DJ2KJ1S/>
+(However do note that they are thin, and probably won't last long).
+
+TODO: Upload the trace file of the glove's design
 
 ## Custom charts
 
