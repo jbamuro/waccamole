@@ -222,8 +222,7 @@ If you want to make a custom LED Driver replacement, instructions, software and 
 
 ![Wacca LEDs](https://cdn.discordapp.com/attachments/568491469799817246/1144020876740808824/PXL_20230822_121850510.jpg "Look at how pretty this is ! (don't mind the weird LED strip on the right)")
 
-The ftdi adapter we use is an [Adafruit FT232H](https://www.adafruit.com/product/2264)
-To flash it with the proper firmware you'll need the [FT_PROG EEPROM programmer](https://ftdichip.com/wp-content/uploads/2023/08/FT_Prog_v3.12.37.642-Installer.exe_.zip) software
+The ftdi adapter we use is an [Adafruit FT232H](https://www.adafruit.com/product/2264) To flash it with the proper firmware you'll need the [FT_PROG EEPROM programmer](https://ftdichip.com/wp-content/uploads/2023/08/FT_Prog_v3.12.37.642-Installer.exe_.zip) software
 
 The flashing instructions are as follows :
 
@@ -501,11 +500,19 @@ Burrito has a neat Wacca Lily R stream overlay, and a Reverse version is in the 
 ## Gooseneck Phone mount thing
 
 There's a little bracket on the top right of your machine that is designed for you to clamp a gooseneck phone mount onto to record gameplay.
+
 TODO: Update this with a recommended mount that has appropriate length etc.
 
 ## Gloves
 
-You will want to wear gloves to play the game because you *will* burn the skin on your fingertips from doing slides on the acrylic. Any cotton gloves are recommended, lots of people like the white gloves available at Daiso. Thick or thin gloves depending on your preference, I like thin but people want to feel less friction from the touch segments and so they go thick. If you wanna go full Wacca, the custom gloves made by marv are OEM these <https://www.amazon.co.jp/-/en/gp/product/B0767CMNDQ/> <https://www.amazon.co.jp/-/en/gp/product/B07DJ2KJ1S/>(these are thin, and won't last long). I have a vector trace of the wacca gloves.
+You will want to wear gloves to play the game because you *will* burn the skin on your fingertips from doing slides on the acrylic. Any cotton gloves are recommended, lots of people like the white gloves available at Daiso. Thick or thin gloves depending on your preference, I like thin but people want to feel less friction from the touch segments and so they go thick.
+
+If you wanna go full Wacca, the custom gloves made by marv are OEM these :
+<https://www.amazon.co.jp/-/en/gp/product/B0767CMNDQ/>
+<https://www.amazon.co.jp/-/en/gp/product/B07DJ2KJ1S/>
+(However do note that they are thin, and probably won't last long).
+
+TODO: Upload the trace file of the glove's design
 
 ## Custom charts
 
