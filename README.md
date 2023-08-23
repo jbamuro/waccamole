@@ -28,10 +28,11 @@ Info dump related to the hardware/firmware/etc of ワッカ
   - [BOM (for use with WS2813B-V5)](#bom-for-use-with-ws2813b-v5)
   - [Soldering it all together](#soldering-it-all-together)
   - [Replacing the board on the touch panel](#replacing-the-board-on-the-touch-panel)
-  - [Other hardware](#other-hardware)
+- [Other](#other)
+  - [Network Router](#network-router)
   - [Working inside the ALLS](#working-inside-the-alls)
   - [Imaging your ALLS drive](#imaging-your-alls-drive)
-- [Other](#other)
+  - [USB capture cards](#usb-capture-cards)
   - [Gooseneck Phone mount thing](#gooseneck-phone-mount-thing)
   - [Gloves](#gloves)
   - [Custom charts](#custom-charts)
@@ -400,10 +401,15 @@ If the cab is powered on you will need to go to "connection test of touch device
 
 Video instructions: <https://youtu.be/iyhxQFl7XyE>
 
-## Other hardware
+---
 
-Network Router
-For connecting to a private server you'll want
+<br>
+
+# Other
+
+## Network Router
+
+For connecting to a private server you'll want one of the following
 
 - GL.iNet GL-AR750 (Creta)
 - GL.iNet GL-AR750S (Slate)
@@ -422,7 +428,7 @@ On a real cab, it all feeds into a built in row of outlets (router has a power c
 
 ## Working inside the ALLS
 
-You can get away with using a phillips screwdriver but you really do risk stripping the screws used here. Notice how each of the screws look like phillips but have a dot? These are JIS screws! You'll want to purchase JIS screwdrivers to use.
+You can get away with using a phillips screwdriver but you really do risk stripping the screws used here. Noticed how each of the screws look like phillips but have a dot? These are JIS screws! You'll want to purchase JIS screwdrivers to use.
 
 The main interest in opening the ALLS is getting to the solid state drive that's inside. It's a bit of a pain but you don't have to disassemble too much of it to be able to get it out (I was able to strain the ATX connector a bit to unscrew the drive without tampering any cable ties).
 
@@ -441,7 +447,9 @@ Plug in your wacca drive via usb sata enclosure device. Any sata enclosure will 
 
 Use DD to image the drive <https://linuxhint.com/make-disk-images-dd-command-linux/>
 
-tl;dr
+<details><summary>Confused? Click here for a line by line tutorial of this procedure</summary>
+
+Begin by installing lsscsi.
 
 `sudo apt install lsscsi`
 
@@ -480,14 +488,11 @@ then restore using
 You'll want to restore on a 120gb or at most 240gb drive to be compatible with how a main storage format works at the moment. (but if you aren't doing that, any larger sized ssd can work)
 
 UNKNOWN: expand the existing partition possible? would be good for the future of wacca+ / omnimix etc.
+</details>
 
-<br>
+## USB capture cards
 
----
-
-# Other
-
-USB capture cards can be used to stream Wacca.
+They can be used to stream Wacca.
 
 This will also show additional song stats on the parts of the screen that are otherwise not visible from the cab. This is the recommended one to use <https://www.amazon.com/gp/product/B0BJ6XLK45> but anything 1080p60 is good, there's no EDID fuckery.
 
