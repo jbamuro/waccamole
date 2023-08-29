@@ -62,26 +62,18 @@ The anatomy of the cabinet an ALLS desktop connecting to a set of PCBs via two U
 
 You can find a list of various informations related to the wacca hardware below.
 
-## USB/Serial Connections Breakdown
+## WACCA USB/Serial Connections Breakdown
 
 ```text
-ALLS desktop RS232 1 --> Left Pentel PCB --> Left half of the touch controller
-ALLS desktop RS232 2 --> Right Pentel PCB --> Right half of the touch controller
-ALLS desktop RS232 3 --> AIME reader
+COM1 (Motherboard): Aime Reader
+COM2 (RS232 Shield #1): AimePay VFD (the little unused display)
+COM3 (RS232 Shield #2): Console Touch (Right)
+COM4 (RS232 Shield #2): Console Touch (Left)
+COM5: Keychip [USB]
+COM6: LED Data Board [USB]
 
-ALLS desktop USB 1 --> Sega IO
-ALLS desktop USB 2 --> LED Data board
-```
-
-## WACCA Serial Port Map
-
-```text
-COM1: Aime Reader
-COM2: AimePay VFD (the little unused display)
-COM3: Console Touch (Right)
-COM4: Console Touch (Left)
-COM5: Keychip
-COM6: Console Lights
+USB1: SEGA IO Board (JVS4)
+USB2: LED Data Board [COM6]
 ```
 
 ## Desktop specifications
@@ -97,7 +89,7 @@ Sound Card: Realtek ALC888S
 OS: Windows 10 IoT LTSB 2016
 PSU: 400W Seasonic 80 Bronze https://www.newegg.com/seasonic-ss-400et-bronze-400w/p/N82E16817151076 [from ALLS UX, i have 0 motiviation to open this PSU to confirm] 
 https://seasonic.com/et SS-400ET
-RS232: 2 port + 1 port [Goes right to COM 1 COM 2 COM 3 on the motherboard]
+RS232: 1 port on motherboard, 1 port on shield #1, 2 ports on shield #2, mapped to COM1-4
 ```
 
 ## Sound system
