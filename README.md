@@ -3,13 +3,13 @@
 Info dump related to the hardware/firmware/etc of ワッカ
 
 ## Table of contents
+
 - [Wacca documentation](#wacca-documentation)
   - [Table of contents](#table-of-contents)
   - [Disclaimer](#disclaimer)
   - [Service manual](#service-manual)
 - [Hardware](#hardware)
-  - [USB/Serial Connections Breakdown](#usbserial-connections-breakdown)
-  - [WACCA Serial Port Map](#wacca-serial-port-map)
+  - [WACCA USB/Serial Connections Breakdown](#wacca-usbserial-connections-breakdown)
   - [Desktop specifications](#desktop-specifications)
   - [Sound system](#sound-system)
   - [Television](#television)
@@ -56,7 +56,7 @@ This PDF should be pretty easy to find online, there's also a shitty version tha
 
 # Hardware
 
-![Wacca I/O board](https://github.com/jbamuro/waccamole/raw/main/img/DSC00811.JPG)
+![Wacca I/O board](img/DSC00811.JPG)
 
 The anatomy of the cabinet an ALLS desktop connecting to a set of PCBs via two USB ports, three RS232 ports, two 3.5mm audio jacks, and digital video out to a 50 inch LCD (hdmi, displayport are supported WITH audio out).
 
@@ -132,14 +132,14 @@ LFA150F-12-J1 150W 12V 50-60Hz 12.5A IN AC100-240V
 LFA150F-5-J1Y 150W 5V 50-60Hz 30A IN AC100-240V
 ```
 
-![Power supplies](https://github.com/jbamuro/waccamole/raw/main/img/DSC00812.JPG)
+![Power supplies](img/DSC00812.JPG)
 
 These two units supply all the power needed for the PCB components (sound system, LEDs, touch controller etc).
 My photos will look a little different at the bottom as we had to jerry rig an extension cable to feed power into the unit since I don't have the original cabling for it. Works fine on American power, there are also reports of it working fine in europe.
 
 R1 uses a 300VA but that's probably overkill.
 
-![step down transformer](https://cdn.discordapp.com/attachments/267603668046446603/1045057845999173692/IMG_20221123_112537805_HDR.jpg)
+![step down transformer](img/IMG_20221123_112537805_HDR.jpg)
 
 Hits about 200W during attract mode.
 TODO: power info during songlist pull etc.
@@ -154,12 +154,12 @@ TODO: power info during songlist pull etc.
 
 There are two of these and they each process 6 segments. Together they control the two halves of the touch controller assembly (for a total of 12 segments).
 
-![Master Touch Unit Control Board](https://github.com/jbamuro/waccamole/raw/main/img/DSC00814.JPG "Master Touch Unit Control Board for the 6 segments on the right of the touch assembly (Can be determined thanks to it's ID, currently set to 8. The controller ID for the left segments is 7)")
+![Master Touch Unit Control Board](img/DSC00814.JPG "Master Touch Unit Control Board for the 6 segments on the right of the touch assembly (Can be determined thanks to it's ID, currently set to 8. The controller ID for the left segments is 7)")
 
 Each segment of the touch controller is connected to the others with the help of RS485 through a ribbon cable.
 The PCBs present on each segment are the exact same with the addition of a custom Pentel IC and some extra components needed to drive the tactile sensor array.
 
-![Pentel IC](https://github.com/jbamuro/waccamole/raw/main/img/DSC00835.JPG "The custom Pentel IC handling tactile input")
+![Pentel IC](img/DSC00835.JPG "The custom Pentel IC handling tactile input")
 
 *Here's a detailed component list of those boards :*
 
@@ -178,7 +178,7 @@ The PCBs present on each segment are the exact same with the addition of a custo
 
 <details><summary>Click to show a Top View picture of the PCB</summary>
 
-![Touch Unit Control Board](https://cdn.discordapp.com/attachments/568491469799817246/1143576271461302333/Top_View.jpg "Top view of the PCB")
+![Touch Unit Control Board](img//Top_View.jpg "Top view of the PCB")
 
 </details>
 
@@ -189,7 +189,7 @@ The PCBs present on each segment are the exact same with the addition of a custo
 
 It sends the pretty colors to the touch controller.
 
-![LED Data board](https://github.com/jbamuro/waccamole/raw/main/img/DSC00813.JPG "An LED Data board, connected to the ALLS using usb")
+![LED Data board](img/DSC00813.JPG "An LED Data board, connected to the ALLS using usb")
 
 Here's a rundown of what this board is made out of :
 
@@ -212,7 +212,7 @@ IC3 Pin# 5 - 5V, VCC in
 
 If you want to make a custom LED Driver replacement, instructions, software and adapter link are below.
 
-![Wacca LEDs](https://cdn.discordapp.com/attachments/568491469799817246/1144020876740808824/PXL_20230822_121850510.jpg "Look at how pretty this is ! (don't mind the weird LED strip on the right)")
+![Wacca LEDs](img/LEDS.jpg "Look at how pretty this is ! (don't mind the weird LED strip on the right)")
 
 The ftdi adapter we use is an [Adafruit FT232H](https://www.adafruit.com/product/2264) To flash it with the proper firmware you'll need the [FT_PROG EEPROM programmer](https://ftdichip.com/wp-content/uploads/2023/08/FT_Prog_v3.12.37.642-Installer.exe_.zip) software
 
@@ -244,17 +244,17 @@ Load the game and you should have LED activity disaplaying if everything is conf
 
 ## 2.1 channel AMP (14-1466CR)
 
-![2.1 channel AMP](https://github.com/jbamuro/waccamole/raw/main/img/DSC00816.JPG "2.1 channel AMP (14-1466CR), Handles analog sound routing to subwoofer and tweeters")
+![2.1 channel AMP](img/DSC00816.JPG "2.1 channel AMP (14-1466CR), Handles analog sound routing to subwoofer and tweeters")
 Handles analog sound routing to subwoofer and tweeters
 
 ## Headphone AMP (00-1358AR)
 
-![Headphone Amplifier](https://github.com/jbamuro/waccamole/raw/main/img/DSC00815.JPG "Headphone Amplifier (00-1358AR), Handles audio output to the control panel")
+![Headphone Amplifier](img/DSC00815.JPG "Headphone Amplifier (00-1358AR), Handles audio output to the control panel")
 Handles audio output to the control panel
 
 ## I/O Control Board (837-15257-01)
 
-![I/O Control Board](https://github.com/jbamuro/waccamole/raw/main/img/DSC00817.JPG)
+![I/O Control Board](img/DSC00817.JPG)
  The existence of this board is a bit overkill for what it's used for, likely it *had* to be used due to Sega producing the cabinets for Marvelous. This is a newer version of the control board that has a USB port on it, almost all sega cabs use this now.
 
  *Note: Wacca does NOT check for a coin counter, so the resistor trick is not needed to apply credits in game.*
@@ -274,7 +274,7 @@ The coin entry stuff connected to the cash box is here too.
 
 The touch controller assembly is composed of 12 segments divided into two halves (6 per side, each having their own main controller board). They each have an individual channel ranging from 1 to 6.
 
-![Wacca touch segment](https://media.discordapp.net/attachments/568491469799817246/1143565017216733204/PXL_20230822_151822250.jpg "Three segments on my small table")
+![Wacca touch segment](img/Segments.jpg "Three segments on my small table")
 
 Each one of these weighs 1kg (2.2LBS) *(870g if the metal bracket is removed)* which totals to about 12kg (26LBS).
 
@@ -282,17 +282,17 @@ Each one of these weighs 1kg (2.2LBS) *(870g if the metal bracket is removed)* w
 Each unit has 5 LED strips (each strip has 8 LEDs making for a total of 40 LEDs per segment). In total, there are 480 LEDs in the touch controller assembly
 
 The sensor array is made out of 5 columns and 4 rows amounting to 20 touch zones par segment. All 12 segments amount to a total of 240 touch zones.
-![Wacca sensor array](https://cdn.discordapp.com/attachments/568491469799817246/1143575566423969812/Wacca_Sensor_Flexible_PCB_Lowres.png "A segment's touch sensor array. There are 12 of these.")
-Click [here](https://cdn.discordapp.com/attachments/297114097546297354/1068442545727746078/Wacca_Sensor_Flexible_PCB-1.png) to download a higher resolution image.
+![Wacca sensor array](img/Wacca_Sensor_Flexible_PCB_Lowres.png "A segment's touch sensor array. There are 12 of these.")
+Click [here](img/Wacca_Sensor_Flexible_PCB.png) to download a higher resolution image.
 
 Somehow I never really understood how MASSIVE these units are until I held an individual segment in my hand.
-![This shit is massive](https://media.discordapp.net/attachments/568491469799817246/1143563743557591070/PXL_20230822_151247219.jpg "")
+![This shit is massive](img/Segment.jpg "")
 
 
 Here are some scans of a segment that shows the curve profile.
-<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve1.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve1.png" width="150" height="150"/>
-<img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve2.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve2.png" width="150" height="150"/>
-<img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve3.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve3.png" width="150" height="150"/>
+<br><img src="img/concurve1.png" data-canonical-src="img/concurve1.png" width="150" height="150"/>
+<img src="img/concurve2.png" data-canonical-src="img/concurve2.png" width="150" height="150"/>
+<img src="img/concurve3.png" data-canonical-src="img/concurve3.png" width="150" height="150"/>
 
 ---
 
@@ -367,15 +367,15 @@ Get some solder paste and apply it to the PCB using the stencil (spread over ste
 
 Remove the control panel with single screw on the left and right side.
 
-![Control panel](https://cdn.discordapp.com/attachments/780283383069540393/1054935055333605457/PXL_20221221_013513863.jpg)
+![Control panel](img/PXL_20221221_013513863.jpg)
 
 You don't need to remove the acrylic, just unplug the harnesses. Unplug, feed them up, slide the control panel out.
 
-![Harnesses](https://cdn.discordapp.com/attachments/780283383069540393/1054948737845301338/PXL_20221221_022911966.jpg)
+![Harnesses](img/PXL_20221221_022911966.jpg)
 
 After you have the outside plastic pieces taken off, disconnect the led data only wires, LED power on the middle LED board, and the touch board cable.  Then remove the two outside screws for the panel and pull it straight out
 
-![Metal bracket screws](https://cdn.discordapp.com/attachments/780283383069540393/1054930972799414382/image.png)
+![Metal bracket screws](img/image.png)
 
 Remove the ribbon from the pentel touch pcb and unscrew and remove the pcb. You can try to get away with not removing the touch PCB by loosening the screws on the touch board enough to get clearance to pull the LED board out, but this is risky and not recommended.
 
@@ -520,4 +520,4 @@ Remap ports based on sticker (front/rear)
 
 Enable the Quadraphonic layout
 
-<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/realtek.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/realtek.png" width="371" height="1251"/> <br>
+<br><img src="img/realtek.png" data-canonical-src="img/realtek.png" width="371" height="1251"/> <br>
